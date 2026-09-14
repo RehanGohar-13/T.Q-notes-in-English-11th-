@@ -1,0 +1,1821 @@
+<!-- Save this file as: surah-al-baqarah.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Surah Al-Baqarah | Cosmic Study Notes</title>
+    <style>
+      :root {
+        --void: #0a0e27;
+        --deep-space: #12173a;
+        --nebula: #1a1f4e;
+        --cosmic-purple: #6b46c1;
+        --stardust: #a78bfa;
+        --gold-star: #fbbf24;
+        --nova: #f472b6;
+        --aurora: #34d399;
+        --moonlight: #e0e7ff;
+        --text-glow: #cbd5e1;
+        --text-muted: #94a3b8;
+        --card-bg: rgba(26, 31, 78, 0.4);
+        --border-glow: rgba(167, 139, 250, 0.2);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family:
+          "Segoe UI",
+          -apple-system,
+          BlinkMacSystemFont,
+          sans-serif;
+      }
+
+      body {
+        background: var(--void);
+        background-image:
+          radial-gradient(
+            ellipse at 20% 30%,
+            rgba(107, 70, 193, 0.3) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            ellipse at 80% 70%,
+            rgba(244, 114, 182, 0.2) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            ellipse at 50% 50%,
+            rgba(52, 211, 153, 0.1) 0%,
+            transparent 70%
+          ),
+          linear-gradient(180deg, var(--void) 0%, var(--deep-space) 100%);
+        background-attachment: fixed;
+        color: var(--moonlight);
+        padding: 30px 15px;
+        line-height: 1.7;
+        min-height: 100vh;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image:
+          radial-gradient(1px 1px at 20px 30px, white, transparent),
+          radial-gradient(
+            1px 1px at 40px 70px,
+            rgba(255, 255, 255, 0.8),
+            transparent
+          ),
+          radial-gradient(1px 1px at 90px 40px, white, transparent),
+          radial-gradient(
+            1px 1px at 130px 80px,
+            rgba(255, 255, 255, 0.6),
+            transparent
+          ),
+          radial-gradient(
+            2px 2px at 160px 30px,
+            rgba(251, 191, 36, 0.8),
+            transparent
+          ),
+          radial-gradient(1px 1px at 200px 90px, white, transparent),
+          radial-gradient(
+            1px 1px at 240px 50px,
+            rgba(167, 139, 250, 0.8),
+            transparent
+          ),
+          radial-gradient(1px 1px at 280px 10px, white, transparent),
+          radial-gradient(
+            2px 2px at 320px 60px,
+            rgba(244, 114, 182, 0.6),
+            transparent
+          ),
+          radial-gradient(1px 1px at 360px 100px, white, transparent);
+        background-size: 400px 200px;
+        background-repeat: repeat;
+        opacity: 0.6;
+        animation: twinkle 8s ease-in-out infinite;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      @keyframes twinkle {
+        0%,
+        100% {
+          opacity: 0.4;
+        }
+        50% {
+          opacity: 0.8;
+        }
+      }
+
+      .orb {
+        position: fixed;
+        border-radius: 50%;
+        filter: blur(80px);
+        opacity: 0.35;
+        pointer-events: none;
+        z-index: 0;
+      }
+      .orb-1 {
+        width: 400px;
+        height: 400px;
+        background: var(--cosmic-purple);
+        top: -100px;
+        left: -100px;
+        animation: float1 20s ease-in-out infinite;
+      }
+      .orb-2 {
+        width: 350px;
+        height: 350px;
+        background: var(--nova);
+        bottom: -50px;
+        right: -80px;
+        animation: float2 25s ease-in-out infinite;
+      }
+
+      @keyframes float1 {
+        0%,
+        100% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(50px, 80px);
+        }
+      }
+      @keyframes float2 {
+        0%,
+        100% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(-70px, -50px);
+        }
+      }
+
+      .container {
+        max-width: 980px;
+        margin: 0 auto;
+        background: var(--card-bg);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        padding: 45px 50px;
+        border-radius: 24px;
+        border: 1px solid var(--border-glow);
+        box-shadow: 0 0 60px rgba(107, 70, 193, 0.15);
+        position: relative;
+        z-index: 1;
+      }
+
+      .back-nav {
+        margin-bottom: 25px;
+      }
+      .back-btn {
+        text-decoration: none;
+        color: var(--stardust);
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.95rem;
+        transition: all 0.3s;
+        padding: 8px 14px;
+        border-radius: 8px;
+        border: 1px solid var(--border-glow);
+        background: rgba(10, 14, 39, 0.4);
+      }
+      .back-btn:hover {
+        color: var(--gold-star);
+        border-color: var(--gold-star);
+        transform: translateX(-4px);
+      }
+
+      header {
+        border-bottom: 1px solid var(--border-glow);
+        padding-bottom: 25px;
+        margin-bottom: 35px;
+        position: relative;
+      }
+      header::after {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100px;
+        height: 2px;
+        background: linear-gradient(90deg, var(--gold-star), transparent);
+      }
+      header h1 {
+        font-size: 2.4rem;
+        letter-spacing: -0.5px;
+        background: linear-gradient(
+          135deg,
+          var(--moonlight),
+          var(--stardust),
+          var(--gold-star)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .subtitle {
+        color: var(--gold-star);
+        font-size: 1rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-top: 6px;
+      }
+      .meta-badge-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 18px;
+      }
+      .meta-badge {
+        background: rgba(167, 139, 250, 0.1);
+        border: 1px solid var(--border-glow);
+        padding: 5px 14px;
+        border-radius: 20px;
+        font-size: 0.82rem;
+        font-weight: 500;
+        color: var(--stardust);
+      }
+
+      h2 {
+        color: var(--moonlight);
+        font-size: 1.5rem;
+        margin: 42px 0 20px;
+        padding-left: 16px;
+        border-left: 4px solid var(--gold-star);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      h2::before {
+        content: "✦";
+        color: var(--gold-star);
+        font-size: 0.9em;
+      }
+      h3 {
+        color: var(--stardust);
+        font-size: 1.15rem;
+        margin: 24px 0 12px;
+      }
+      p {
+        margin-bottom: 16px;
+        text-align: justify;
+        color: var(--text-glow);
+      }
+      p strong {
+        color: var(--gold-star);
+      }
+      p em {
+        color: var(--nova);
+        font-style: normal;
+        font-weight: 500;
+      }
+
+      .callout-box {
+        background: linear-gradient(
+          135deg,
+          rgba(107, 70, 193, 0.15),
+          rgba(244, 114, 182, 0.1)
+        );
+        border: 1px solid var(--border-glow);
+        border-left: 4px solid var(--gold-star);
+        padding: 20px 25px;
+        border-radius: 12px;
+        margin: 25px 0;
+        position: relative;
+        overflow: hidden;
+      }
+      .callout-box::before {
+        content: "";
+        position: absolute;
+        top: -30px;
+        right: -30px;
+        width: 100px;
+        height: 100px;
+        background: radial-gradient(
+          circle,
+          rgba(251, 191, 36, 0.2),
+          transparent
+        );
+        border-radius: 50%;
+      }
+      .callout-title {
+        font-weight: 700;
+        color: var(--gold-star);
+        margin-bottom: 8px;
+        font-size: 1.05rem;
+      }
+      .callout-box p {
+        color: var(--text-glow);
+        margin-bottom: 0;
+      }
+
+      .tree-structure {
+        background: rgba(10, 14, 39, 0.5);
+        border: 1px solid var(--border-glow);
+        border-radius: 16px;
+        padding: 28px 32px;
+        margin: 25px 0;
+      }
+      .tree-structure > ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      .tree-structure > ul > li {
+        font-weight: 700;
+        color: var(--moonlight);
+        margin-top: 18px;
+        padding-left: 8px;
+        border-left: 2px solid var(--cosmic-purple);
+      }
+      .tree-structure > ul > li:first-child {
+        margin-top: 0;
+      }
+      .tree-structure ul ul {
+        padding-left: 24px;
+        list-style-type: none;
+        margin-top: 8px;
+      }
+      .tree-structure ul ul li {
+        font-weight: 400;
+        color: var(--text-glow);
+        font-size: 0.94rem;
+        margin-bottom: 6px;
+        padding-left: 15px;
+        position: relative;
+      }
+      .tree-structure ul ul li::before {
+        content: "◆";
+        position: absolute;
+        left: 0;
+        color: var(--gold-star);
+        font-size: 0.7em;
+        top: 4px;
+      }
+      .tree-structure ul ul li strong {
+        color: var(--nova);
+      }
+      .tree-structure ul ul li em {
+        color: var(--aurora);
+        font-style: normal;
+      }
+
+      .summary-table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin: 20px 0;
+        font-size: 0.92rem;
+        background: rgba(10, 14, 39, 0.5);
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid var(--border-glow);
+      }
+      .summary-table th,
+      .summary-table td {
+        padding: 14px 16px;
+        text-align: left;
+        border-bottom: 1px solid var(--border-glow);
+      }
+      .summary-table th {
+        background: linear-gradient(
+          135deg,
+          var(--cosmic-purple),
+          var(--nebula)
+        );
+        color: var(--moonlight);
+        font-weight: 600;
+      }
+      .summary-table tr:last-child td {
+        border-bottom: none;
+      }
+      .summary-table tr:hover td {
+        background: rgba(167, 139, 250, 0.05);
+      }
+      .summary-table td {
+        color: var(--text-glow);
+      }
+      .summary-table td strong {
+        color: var(--gold-star);
+      }
+      .summary-table td em {
+        color: var(--nova);
+        font-style: normal;
+        font-weight: 500;
+      }
+
+      .q-card {
+        background: rgba(10, 14, 39, 0.5);
+        border: 1px solid var(--border-glow);
+        border-radius: 14px;
+        padding: 22px;
+        margin-bottom: 18px;
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+      }
+      .q-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 3px;
+        height: 100%;
+        background: linear-gradient(180deg, var(--gold-star), var(--nova));
+        opacity: 0.5;
+      }
+      .q-card:hover {
+        border-color: var(--stardust);
+        box-shadow: 0 8px 25px rgba(167, 139, 250, 0.15);
+      }
+      .q-title {
+        font-weight: 600;
+        margin-bottom: 15px;
+        font-size: 1rem;
+        color: var(--moonlight);
+      }
+      .options-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+      .option {
+        background: rgba(26, 31, 78, 0.5);
+        padding: 11px 15px;
+        border: 1px solid var(--border-glow);
+        border-radius: 8px;
+        font-size: 0.92rem;
+        cursor: pointer;
+        transition: all 0.2s;
+        color: var(--text-glow);
+      }
+      .option:hover {
+        border-color: var(--gold-star);
+        background: rgba(251, 191, 36, 0.1);
+        color: var(--moonlight);
+        transform: translateY(-2px);
+      }
+
+      .sq-card {
+        background: rgba(26, 31, 78, 0.3);
+        border: 1px solid rgba(167, 139, 250, 0.15);
+        border-radius: 16px;
+        padding: 25px;
+        margin-bottom: 20px;
+        transition: all 0.3s;
+      }
+      .sq-card:hover {
+        border-color: var(--stardust);
+        box-shadow: 0 8px 30px rgba(167, 139, 250, 0.1);
+      }
+      .sq-question {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--gold-star);
+        margin-bottom: 12px;
+        display: flex;
+        gap: 10px;
+      }
+      .sq-question span {
+        color: var(--stardust);
+      }
+      .sq-answer {
+        color: var(--text-glow);
+        font-size: 0.95rem;
+        padding-left: 24px;
+        border-left: 2px solid rgba(167, 139, 250, 0.3);
+        text-align: justify;
+      }
+      .sq-answer ol {
+        margin: 10px 0 0 20px;
+      }
+      .sq-answer li {
+        margin-bottom: 6px;
+        color: var(--text-glow);
+      }
+
+      .lq-card {
+        background: rgba(26, 31, 78, 0.35);
+        border: 1px solid rgba(167, 139, 250, 0.2);
+        border-radius: 18px;
+        padding: 30px;
+        margin-bottom: 25px;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+      }
+      .lq-card::before {
+        content: "";
+        position: absolute;
+        top: -100px;
+        left: -100px;
+        width: 250px;
+        height: 250px;
+        background: radial-gradient(
+          circle,
+          rgba(244, 114, 182, 0.1),
+          transparent 70%
+        );
+        pointer-events: none;
+      }
+      .lq-question {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: var(--moonlight);
+        margin-bottom: 18px;
+        display: flex;
+        gap: 12px;
+        line-height: 1.4;
+        border-bottom: 1px dashed rgba(167, 139, 250, 0.2);
+        padding-bottom: 15px;
+      }
+      .lq-question span {
+        color: var(--gold-star);
+      }
+      .lq-answer {
+        color: var(--text-glow);
+        font-size: 0.98rem;
+        line-height: 1.8;
+        text-align: justify;
+      }
+      .lq-answer p {
+        margin-bottom: 16px;
+      }
+      .lq-answer ul {
+        list-style-type: none;
+        padding-left: 0;
+        margin-bottom: 15px;
+      }
+      .lq-answer ul li {
+        margin-bottom: 15px;
+        padding-left: 20px;
+        position: relative;
+      }
+      .lq-answer ul li::before {
+        content: "✦";
+        position: absolute;
+        left: 0;
+        color: var(--gold-star);
+        font-size: 0.8rem;
+        top: 2px;
+      }
+      .lq-answer ul li strong {
+        color: var(--stardust);
+        display: inline-block;
+        margin-bottom: 4px;
+        font-size: 1.02rem;
+      }
+
+      /* Topic Narrative Cards (for Adam story) */
+      .topic-overview {
+        background: linear-gradient(
+          135deg,
+          rgba(107, 70, 193, 0.12),
+          rgba(52, 211, 153, 0.08)
+        );
+        border: 1px solid var(--border-glow);
+        border-radius: 16px;
+        padding: 28px;
+        margin: 20px 0 30px;
+        position: relative;
+        overflow: hidden;
+      }
+      .topic-overview::after {
+        content: "";
+        position: absolute;
+        bottom: -60px;
+        right: -60px;
+        width: 180px;
+        height: 180px;
+        background: radial-gradient(
+          circle,
+          rgba(251, 191, 36, 0.1),
+          transparent
+        );
+        border-radius: 50%;
+      }
+      .topic-overview p {
+        position: relative;
+        z-index: 1;
+      }
+
+      .detail-card {
+        background: rgba(10, 14, 39, 0.5);
+        border: 1px solid var(--border-glow);
+        border-radius: 14px;
+        padding: 24px 28px;
+        margin-bottom: 18px;
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s;
+      }
+      .detail-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(
+          180deg,
+          var(--aurora),
+          var(--cosmic-purple)
+        );
+        opacity: 0.6;
+      }
+      .detail-card:hover {
+        border-color: var(--aurora);
+        box-shadow: 0 6px 25px rgba(52, 211, 153, 0.1);
+      }
+      .detail-card h3 {
+        color: var(--aurora);
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .detail-card h3 .num {
+        background: linear-gradient(
+          135deg,
+          var(--aurora),
+          var(--cosmic-purple)
+        );
+        color: white;
+        font-size: 0.8rem;
+        width: 28px;
+        height: 28px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+
+      .takeaway-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+        margin: 20px 0;
+      }
+      .takeaway-item {
+        background: rgba(251, 191, 36, 0.06);
+        border: 1px solid rgba(251, 191, 36, 0.2);
+        border-radius: 12px;
+        padding: 18px;
+        display: flex;
+        gap: 12px;
+        align-items: flex-start;
+        transition: all 0.3s;
+      }
+      .takeaway-item:hover {
+        border-color: var(--gold-star);
+        transform: translateY(-2px);
+      }
+      .takeaway-num {
+        background: linear-gradient(135deg, var(--gold-star), var(--nova));
+        color: var(--void);
+        font-weight: 800;
+        font-size: 0.85rem;
+        min-width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        flex-shrink: 0;
+      }
+      .takeaway-text {
+        color: var(--text-glow);
+        font-size: 0.93rem;
+        line-height: 1.5;
+      }
+
+      details.answer-details {
+        margin-top: 15px;
+      }
+      details.answer-details summary {
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--gold-star);
+        cursor: pointer;
+        user-select: none;
+        padding: 6px 10px;
+        border-radius: 6px;
+        display: inline-block;
+        transition: all 0.2s;
+      }
+      details.answer-details summary:hover {
+        background: rgba(251, 191, 36, 0.1);
+      }
+      details.answer-details[open] summary {
+        margin-bottom: 10px;
+      }
+      .answer-content {
+        background: rgba(52, 211, 153, 0.1);
+        border: 1px solid rgba(52, 211, 153, 0.3);
+        color: var(--moonlight);
+        padding: 12px 16px;
+        border-radius: 8px;
+        font-size: 0.9rem;
+      }
+      .answer-content strong {
+        color: var(--aurora);
+      }
+      .answer-content em {
+        color: var(--stardust);
+        font-style: normal;
+      }
+
+      footer {
+        text-align: center;
+        margin-top: 55px;
+        padding-top: 30px;
+        border-top: 1px solid var(--border-glow);
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        line-height: 1.7;
+        position: relative;
+      }
+      footer::before {
+        content: "· · · ✦ · · ·";
+        display: block;
+        color: var(--gold-star);
+        margin-bottom: 15px;
+        letter-spacing: 8px;
+      }
+      footer .name {
+        font-size: 1.1rem;
+        font-weight: 700;
+        background: linear-gradient(135deg, var(--stardust), var(--gold-star));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 30px 25px;
+        }
+        .options-grid {
+          grid-template-columns: 1fr;
+        }
+        .takeaway-grid {
+          grid-template-columns: 1fr;
+        }
+        header h1 {
+          font-size: 1.9rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+
+    <div class="container">
+      <div class="back-nav">
+        <a href="index.html" class="back-btn">⬅ Back to Cosmic Portal</a>
+      </div>
+
+      <header>
+        <h1>Surah Al-Baqarah (سورة البقرة)</h1>
+        <div class="subtitle">✦ Academic Study Guide & Question Bank ✦</div>
+        <div class="meta-badge-row">
+          <span class="meta-badge">📖 Surah #02</span>
+          <span class="meta-badge">📍 Madani</span>
+          <span class="meta-badge">🔢 286 Verses</span>
+          <span class="meta-badge">📜 40 Rukus</span>
+          <span class="meta-badge">⏱️ 1 AH – 10 AH</span>
+        </div>
+      </header>
+
+      <!-- ==================== SECTION I ==================== -->
+      <h2>I. Strategic Overview & Objectives</h2>
+      <p>
+        <strong>Surah Al-Baqarah ("The Cow")</strong> is the longest chapter of
+        the Holy Qur'an. Revealed primarily during the early Madinan period
+        following the <em>Hijrah</em>, it lays down the comprehensive
+        legislative, economic, moral, and social foundation of the emerging
+        Muslim community (<em>Ummah</em>).
+      </p>
+      <p>
+        The central theme centers on
+        <strong
+          >guidance (<em>Hidayah</em>), covenantal stewardship of the Earth
+          (<em>Khilafah</em>), and total submission to divine
+          legislation</strong
+        >. The narrative contrasts the historical failure of previous nations to
+        preserve their covenants with the responsibilities placed upon the new
+        universal Muslim community.
+      </p>
+
+      <!-- ==================== SECTION II ==================== -->
+      <h2>II. Thematic Flowchart & Structural Divisions</h2>
+      <div class="tree-structure">
+        <ul>
+          <li>
+            🪐 Phase 1: The Three Archetypes of Humanity (Verses 1–20)
+            <ul>
+              <li>
+                <strong>Verses 1–5:</strong> Attributes of
+                <em>Al-Muttaqun</em> (The God-Conscious).
+              </li>
+              <li>
+                <strong>Verses 6–7:</strong> Profile of persistent disbelievers
+                (<em>Al-Kafirun</em>).
+              </li>
+              <li>
+                <strong>Verses 8–20:</strong> Detailed psychology and parables
+                of the Hypocrites (<em>Al-Munafiqun</em>).
+              </li>
+            </ul>
+          </li>
+          <li>
+            🌌 Phase 2: Universal Call to Tawheed & Creation of Man (Verses
+            21–39)
+            <ul>
+              <li>
+                The first universal command:
+                <em>"O mankind, worship your Lord..."</em> (v. 21).
+              </li>
+              <li>
+                The challenge to produce a single chapter like the Qur'an (vv.
+                23–24).
+              </li>
+              <li>
+                The appointment of Adam (A.S.) as Earth's vicegerent
+                (<em>Khalifah</em>) and the arrogance of Iblis.
+              </li>
+            </ul>
+          </li>
+          <li>
+            ⭐ Phase 3: The Historical Covenant & Bani Israel (Verses 40–123)
+            <ul>
+              <li>
+                Review of divine favors, deliverances from Pharaoh, and
+                recurrent breaches of covenant.
+              </li>
+              <li>
+                The Calf incident, the Sabbath transgression, and spiritual
+                callousness of the heart.
+              </li>
+              <li>
+                <strong>The Lesson of the Cow (vv. 67–73):</strong> Skepticism
+                vs. sincere obedience.
+              </li>
+            </ul>
+          </li>
+          <li>
+            ✨ Phase 4: Abrahamic Legacy & The Central Qiblah (Verses 124–167)
+            <ul>
+              <li>
+                Trial and leadership of Prophet Ibrahim (A.S.);
+                foundation-laying of the Ka'bah.
+              </li>
+              <li>
+                The official change of the prayer direction (<em>Qiblah</em>)
+                from Jerusalem to Makkah (vv. 142–150).
+              </li>
+              <li>
+                Declaration of the <em>Ummatan Wasata</em> (a balanced,
+                middle-path nation).
+              </li>
+            </ul>
+          </li>
+          <li>
+            🌠 Phase 5: Comprehensive Fiqh & Civil Ordinances (Verses 168–242)
+            <ul>
+              <li>
+                <strong>Al-Birr (v. 177):</strong> The comprehensive definition
+                of true righteousness.
+              </li>
+              <li>
+                Legislative mandates: <em>Qisas</em>, Fasting of Ramadan (vv.
+                183–187), and Hajj (vv. 196–203).
+              </li>
+              <li>
+                Family Code: Marriage, divorce (<em>Talaq</em>), <em>Iddah</em>,
+                breastfeeding, and maintenance.
+              </li>
+            </ul>
+          </li>
+          <li>
+            💫 Phase 6: Financial Ethics, Sovereign Authority & Creed (Verses
+            243–286)
+            <ul>
+              <li>
+                Historical struggles: Talut (Saul), Jalut (Goliath), and the
+                young Dawud (A.S.).
+              </li>
+              <li>
+                <strong>Ayat al-Kursi (v. 255):</strong> The Throne Verse
+                declaring Absolute Divine Sovereignty.
+              </li>
+              <li>
+                Sadaqah contrasted with the outright condemnation of
+                <em>Riba</em> (vv. 275–281).
+              </li>
+              <li>
+                <strong>Ayat al-Mudayanah (v. 282):</strong> The longest single
+                verse regarding contracts.
+              </li>
+              <li>
+                <strong>Closing Supplication (vv. 285–286):</strong> Declaration
+                of faith and supplication for ease.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <!-- ==================== SECTION III ==================== -->
+      <h2>III. Core Theological Landmark Verses</h2>
+      <table class="summary-table">
+        <thead>
+          <tr>
+            <th>Verse</th>
+            <th>Title / Concept</th>
+            <th>Core Significance & Doctrinal Insight</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>2:143</strong></td>
+            <td><em>Ummatan Wasata</em></td>
+            <td>
+              Positions the Muslim Ummah as a balanced, moderate, and exemplary
+              witness over all mankind.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>2:177</strong></td>
+            <td><em>Ayat al-Birr</em></td>
+            <td>
+              Synthesizes true piety: integrating correct theological creed with
+              practical socio-economic charity and patience.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>2:255</strong></td>
+            <td><em>Ayat al-Kursi</em></td>
+            <td>
+              Supreme affirmation of <em>Tawheed</em>, Divine Self-Sufficiency
+              (<em>Al-Hayy, Al-Qayyum</em>), and infinite sovereignty.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>2:256</strong></td>
+            <td><em>La Ikraha fid-Deen</em></td>
+            <td>
+              Foundational principle: "There is no compulsion in religion,"
+              establishing freedom of conscience.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>2:282</strong></td>
+            <td><em>Ayat al-Mudayanah</em></td>
+            <td>
+              Longest verse in the Qur'an; establishes legal frameworks for
+              financial loan documentation and equity.
+            </td>
+          </tr>
+          <tr>
+            <td><strong>2:285–286</strong></td>
+            <td><em>Aamana ar-Rasul</em></td>
+            <td>
+              Affirmation of universal prophetic belief; establishes that Allah
+              never burdens a soul beyond its capacity.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="callout-box">
+        <div class="callout-title">
+          🌟 Key Principle: The Anatomy of Hypocrisy (Nifaq)
+        </div>
+        <p>
+          Surah Al-Baqarah allocates only <strong>5 verses</strong> to Believers
+          and <strong>2 verses</strong> for open Disbelievers, but dedicates
+          <strong>13 verses (8–20)</strong> to expose Hypocrites. It employs two
+          vivid similes:
+          <em
+            >the fire-kindler whose light is stripped away leaving him in
+            darkness</em
+          >, and
+          <em>the rainstorm filled with darkness, thunder, and lightning</em>,
+          illustrating paralyzing spiritual doubt and opportunism.
+        </p>
+      </div>
+
+      <!-- ==================== SECTION IV ==================== -->
+      <h2>IV. Objective Evaluation Module (MCQ Bank)</h2>
+
+      <div class="q-card">
+        <div class="q-title">
+          Q1. Which verse explicitly defines the comprehensive standard of "True
+          Piety and Righteousness" (Al-Birr)?
+        </div>
+        <div class="options-grid">
+          <div class="option">(a) Verse 143</div>
+          <div class="option">(b) Verse 177</div>
+          <div class="option">(c) Verse 255</div>
+          <div class="option">(d) Verse 282</div>
+        </div>
+        <details class="answer-details">
+          <summary>✨ Reveal Answer & Analysis</summary>
+          <div class="answer-content">
+            <strong>Correct Answer: (b) Verse 177</strong><br /><em
+              >Explanation:</em
+            >
+            Verse 177 breaks ritualism into core components: belief in Allah,
+            the Last Day, Angels, Books, Prophets, spending beloved wealth,
+            establishing prayer, giving Zakat, fulfilling covenants, and
+            patience in adversity.
+          </div>
+        </details>
+      </div>
+
+      <div class="q-card">
+        <div class="q-title">
+          Q2. In the narrative of Adam's creation (vv. 30–34), what term defines
+          humanity's purpose on Earth?
+        </div>
+        <div class="options-grid">
+          <div class="option">(a) Rasool</div>
+          <div class="option">(b) Wali</div>
+          <div class="option">(c) Khalifah (Vicegerent)</div>
+          <div class="option">(d) Shaheed</div>
+        </div>
+        <details class="answer-details">
+          <summary>✨ Reveal Answer & Analysis</summary>
+          <div class="answer-content">
+            <strong>Correct Answer: (c) Khalifah</strong><br /><em
+              >Explanation:</em
+            >
+            Verse 30: <em>"Inni ja'ilun fil-ardi khalifah"</em> — human
+            stewardship under divine accountability.
+          </div>
+        </details>
+      </div>
+
+      <div class="q-card">
+        <div class="q-title">
+          Q3. What command was issued regarding the shift of the Qiblah?
+        </div>
+        <div class="options-grid">
+          <div class="option">(a) Makkah to Jerusalem</div>
+          <div class="option">(b) Jerusalem to Ka'bah, Makkah</div>
+          <div class="option">(c) Madinah to Sinai</div>
+          <div class="option">(d) Yemen to Makkah</div>
+        </div>
+        <details class="answer-details">
+          <summary>✨ Reveal Answer & Analysis</summary>
+          <div class="answer-content">
+            <strong>Correct Answer: (b) Jerusalem to Ka'bah, Makkah</strong
+            ><br /><em>Explanation:</em> Verses 142–150 detail the command to
+            turn toward <em>Al-Masjid Al-Haram</em> after ~16–17 months
+            post-Hijrah.
+          </div>
+        </details>
+      </div>
+
+      <div class="q-card">
+        <div class="q-title">
+          Q4. What is the first act of worship mentioned among the believers'
+          traits?
+        </div>
+        <div class="options-grid">
+          <div class="option">(a) Charity</div>
+          <div class="option">(b) Fasting</div>
+          <div class="option">(c) The Prayer</div>
+          <div class="option">(d) Pilgrimage</div>
+        </div>
+        <details class="answer-details">
+          <summary>✨ Reveal Answer & Analysis</summary>
+          <div class="answer-content">
+            <strong>Correct Answer: (c) The Prayer</strong><br /><em
+              >Explanation:</em
+            >
+            After belief in the Unseen, establishing prayer (Salat) is the
+            primary physical manifestation of faith.
+          </div>
+        </details>
+      </div>
+
+      <div class="q-card">
+        <div class="q-title">
+          Q5. Believers spend in charity from what source?
+        </div>
+        <div class="options-grid">
+          <div class="option">(a) Wealth earned exclusively</div>
+          <div class="option">(b) What Allah has provided</div>
+          <div class="option">(c) Borrowed money</div>
+          <div class="option">(d) Gifts from others</div>
+        </div>
+        <details class="answer-details">
+          <summary>✨ Reveal Answer & Analysis</summary>
+          <div class="answer-content">
+            <strong>Correct Answer: (b) What Allah has provided</strong
+            ><br /><em>Explanation:</em> Verse 3:
+            <em>"wa mimma razaqnahum yunfiqun"</em> — Allah is the ultimate
+            source of all sustenance.
+          </div>
+        </details>
+      </div>
+
+      <div class="q-card">
+        <div class="q-title">Q6. What is meant by "Yuqeemoonas-Salat"?</div>
+        <div class="options-grid">
+          <div class="option">(a) To read casually</div>
+          <div class="option">
+            (b) To establish prayer regularly and completely
+          </div>
+          <div class="option">(c) To pray only on Fridays</div>
+          <div class="option">(d) To pray only at festivals</div>
+        </div>
+        <details class="answer-details">
+          <summary>✨ Reveal Answer & Analysis</summary>
+          <div class="answer-content">
+            <strong
+              >Correct Answer: (b) To establish prayer regularly and
+              completely</strong
+            ><br /><em>Explanation:</em> "Iqamah" implies establishing prayers
+            on time, following correct rules, and maintaining sincerity
+            (<em>Khushu</em>).
+          </div>
+        </details>
+      </div>
+
+      <div class="q-card">
+        <div class="q-title">
+          Q7. The last quality of believers mentioned in this passage is:
+        </div>
+        <div class="options-grid">
+          <div class="option">(a) Certainty in the Hereafter</div>
+          <div class="option">(b) Love for parents</div>
+          <div class="option">(c) Certainty in the present</div>
+          <div class="option">(d) Faith in angels</div>
+        </div>
+        <details class="answer-details">
+          <summary>✨ Reveal Answer & Analysis</summary>
+          <div class="answer-content">
+            <strong>Correct Answer: (a) Certainty in the Hereafter</strong
+            ><br /><em>Explanation:</em> Verse 4:
+            <em>"wabil-akhirati hum yooqinoon"</em>.
+          </div>
+        </details>
+      </div>
+
+      <div class="q-card">
+        <div class="q-title">
+          Q8. What is the reward for true believers according to verse 5?
+        </div>
+        <div class="options-grid">
+          <div class="option">(a) Worldly success</div>
+          <div class="option">(b) Power over others</div>
+          <div class="option">(c) Divine guidance and eternal success</div>
+          <div class="option">(d) Wealth and fame</div>
+        </div>
+        <details class="answer-details">
+          <summary>✨ Reveal Answer & Analysis</summary>
+          <div class="answer-content">
+            <strong
+              >Correct Answer: (c) Divine guidance and eternal success</strong
+            ><br /><em>Explanation:</em>
+            <em
+              >"Ula'ika 'ala hudam mir-Rabbihim wa ula'ika humul-muflihoon."</em
+            >
+          </div>
+        </details>
+      </div>
+
+      <div class="q-card">
+        <div class="q-title">
+          Q9. What is sealed in the hearts of disbelievers?
+        </div>
+        <div class="options-grid">
+          <div class="option">(a) Mercy</div>
+          <div class="option">(b) Light</div>
+          <div class="option">(c) Faith</div>
+          <div class="option">(d) Understanding</div>
+        </div>
+        <details class="answer-details">
+          <summary>✨ Reveal Answer & Analysis</summary>
+          <div class="answer-content">
+            <strong>Correct Answer: (c) Faith</strong><br /><em
+              >Explanation:</em
+            >
+            Persistent rejection causes hearts and hearing to be sealed (Verse
+            7).
+          </div>
+        </details>
+      </div>
+
+      <div class="q-card">
+        <div class="q-title">Q10. Why do disbelievers reject the truth?</div>
+        <div class="options-grid">
+          <div class="option">(a) Poverty</div>
+          <div class="option">(b) Pride and arrogance</div>
+          <div class="option">(c) Fear</div>
+          <div class="option">(d) Ignorance</div>
+        </div>
+        <details class="answer-details">
+          <summary>✨ Reveal Answer & Analysis</summary>
+          <div class="answer-content">
+            <strong>Correct Answer: (b) Pride and arrogance</strong><br /><em
+              >Explanation:</em
+            >
+            Stubborn intellectual arrogance prevents yielding to clear divine
+            signs.
+          </div>
+        </details>
+      </div>
+
+      <div class="q-card">
+        <div class="q-title">
+          Q11. What is the disease in the hearts of hypocrites?
+        </div>
+        <div class="options-grid">
+          <div class="option">(a) Blindness</div>
+          <div class="option">(b) Envy</div>
+          <div class="option">(c) Doubt</div>
+          <div class="option">(d) Ignorance</div>
+        </div>
+        <details class="answer-details">
+          <summary>✨ Reveal Answer & Analysis</summary>
+          <div class="answer-content">
+            <strong>Correct Answer: (c) Doubt</strong><br /><em
+              >Explanation:</em
+            >
+            Verse 10: <em>"Fee quloobihim maradhun"</em> — doubt, skepticism,
+            and insincerity.
+          </div>
+        </details>
+      </div>
+
+      <div class="q-card">
+        <div class="q-title">Q12. The hypocrites claim they are:</div>
+        <div class="options-grid">
+          <div class="option">(a) Reformers</div>
+          <div class="option">(b) Disbelievers</div>
+          <div class="option">(c) Believers</div>
+          <div class="option">(d) Angels</div>
+        </div>
+        <details class="answer-details">
+          <summary>✨ Reveal Answer & Analysis</summary>
+          <div class="answer-content">
+            <strong>Correct Answer: (a) Reformers</strong><br /><em
+              >Explanation:</em
+            >
+            Verse 11: <em>"Innama nahnu muslihoon"</em> (We are only reformers).
+          </div>
+        </details>
+      </div>
+
+      <div class="q-card">
+        <div class="q-title">Q13. Hypocrites try to deceive:</div>
+        <div class="options-grid">
+          <div class="option">(a) Believers only</div>
+          <div class="option">(b) Disbelievers</div>
+          <div class="option">(c) Their families</div>
+          <div class="option">(d) Allah and believers</div>
+        </div>
+        <details class="answer-details">
+          <summary>✨ Reveal Answer & Analysis</summary>
+          <div class="answer-content">
+            <strong>Correct Answer: (d) Allah and believers</strong><br /><em
+              >Explanation:</em
+            >
+            Verse 9: <em>"Yukhadioona Allaha wallatheena amanoo"</em> — but they
+            only deceive themselves.
+          </div>
+        </details>
+      </div>
+
+      <div class="q-card">
+        <div class="q-title">
+          Q14. What parable describes hypocrites' unstable faith?
+        </div>
+        <div class="options-grid">
+          <div class="option">(a) A fire that goes out</div>
+          <div class="option">(b) A tall mountain</div>
+          <div class="option">(c) A green garden</div>
+          <div class="option">(d) A fortress</div>
+        </div>
+        <details class="answer-details">
+          <summary>✨ Reveal Answer & Analysis</summary>
+          <div class="answer-content">
+            <strong>Correct Answer: (a) A fire that goes out</strong><br /><em
+              >Explanation:</em
+            >
+            Verses 17–18: kindled fire, then Allah took away their light.
+          </div>
+        </details>
+      </div>
+
+      <div class="q-card">
+        <div class="q-title">
+          Q15. The sealed hearts of disbelievers represent:
+        </div>
+        <div class="options-grid">
+          <div class="option">(a) Absolute knowledge</div>
+          <div class="option">(b) Temporary refusal</div>
+          <div class="option">(c) Permanent refusal of truth</div>
+          <div class="option">(d) Weak understanding</div>
+        </div>
+        <details class="answer-details">
+          <summary>✨ Reveal Answer & Analysis</summary>
+          <div class="answer-content">
+            <strong>Correct Answer: (c) Permanent refusal of truth</strong
+            ><br /><em>Explanation:</em> Complete sealing marks a state where
+            truth can no longer penetrate.
+          </div>
+        </details>
+      </div>
+
+      <div class="q-card">
+        <div class="q-title">
+          Q16. What happens to the hypocrites' "disease" when they lie?
+        </div>
+        <div class="options-grid">
+          <div class="option">(a) It disappears</div>
+          <div class="option">(b) It increases</div>
+          <div class="option">(c) It changes behavior</div>
+          <div class="option">(d) It hurts others</div>
+        </div>
+        <details class="answer-details">
+          <summary>✨ Reveal Answer & Analysis</summary>
+          <div class="answer-content">
+            <strong>Correct Answer: (b) It increases</strong><br /><em
+              >Explanation:</em
+            >
+            Verse 10: <em>"Fazadahumu Allahu maradha"</em> — persistent lying
+            strengthens hypocrisy.
+          </div>
+        </details>
+      </div>
+
+      <div class="q-card">
+        <div class="q-title">
+          Q17. The storm example in verses 19–20 matches:
+        </div>
+        <div class="options-grid">
+          <div class="option">(a) Strong faith</div>
+          <div class="option">(b) Confusion and limited belief</div>
+          <div class="option">(c) Hope for dominance</div>
+          <div class="option">(d) Sincerity</div>
+        </div>
+        <details class="answer-details">
+          <summary>✨ Reveal Answer & Analysis</summary>
+          <div class="answer-content">
+            <strong>Correct Answer: (b) Confusion and limited belief</strong
+            ><br /><em>Explanation:</em> Thunder, lightning, and darkness
+            symbolize the hypocrites' unstable, situational faith.
+          </div>
+        </details>
+      </div>
+
+      <div class="q-card">
+        <div class="q-title">
+          Q18. How many main categories of people open Surah Al-Baqarah?
+        </div>
+        <div class="options-grid">
+          <div class="option">(a) Two</div>
+          <div class="option">(b) Three</div>
+          <div class="option">(c) Four</div>
+          <div class="option">(d) Five</div>
+        </div>
+        <details class="answer-details">
+          <summary>✨ Reveal Answer & Analysis</summary>
+          <div class="answer-content">
+            <strong>Correct Answer: (b) Three</strong><br /><em
+              >Explanation:</em
+            >
+            Believers (1–5), Disbelievers (6–7), Hypocrites (8–20).
+          </div>
+        </details>
+      </div>
+
+      <div class="q-card">
+        <div class="q-title">
+          Q19. Who are the core of the Muslim community?
+        </div>
+        <div class="options-grid">
+          <div class="option">(a) Disbelievers</div>
+          <div class="option">(b) The Believers</div>
+          <div class="option">(c) Hypocrites</div>
+          <div class="option">(d) Traders</div>
+        </div>
+        <details class="answer-details">
+          <summary>✨ Reveal Answer & Analysis</summary>
+          <div class="answer-content">
+            <strong>Correct Answer: (b) The Believers</strong><br /><em
+              >Explanation:</em
+            >
+            Sincere believers form the moral and structural core of the Ummah.
+          </div>
+        </details>
+      </div>
+
+      <div class="q-card">
+        <div class="q-title">Q20. Ultimate success belongs to those whose:</div>
+        <div class="options-grid">
+          <div class="option">(a) Wealth grows quickly</div>
+          <div class="option">(b) Faith is linked with right actions</div>
+          <div class="option">(c) Authority helps status</div>
+          <div class="option">(d) Faith alone without deeds</div>
+        </div>
+        <details class="answer-details">
+          <summary>✨ Reveal Answer & Analysis</summary>
+          <div class="answer-content">
+            <strong
+              >Correct Answer: (b) Faith is linked with right actions</strong
+            ><br /><em>Explanation:</em> True <em>Falah</em> requires sincere
+            <em>Iman</em> combined with <em>Amal-as-Salih</em>.
+          </div>
+        </details>
+      </div>
+
+      <!-- ==================== SECTION V ==================== -->
+      <h2>V. Conceptual Short-Answer Module</h2>
+
+      <div class="sq-card">
+        <div class="sq-question">
+          <span>Q1.</span> What are the five qualities of true believers?
+        </div>
+        <div class="sq-answer">
+          <ol>
+            <li>
+              <strong>Belief in the Unseen (Al-Ghaib):</strong> Faith in Allah,
+              angels, revelation, and life after death.
+            </li>
+            <li>
+              <strong>Establishment of Regular Prayer (Salat):</strong>
+              Consistent prayer with inner focus (<em>Khushu</em>) and proper
+              timings.
+            </li>
+            <li>
+              <strong>Socio-Economic Spending:</strong> Spending in Allah's path
+              from His provisions.
+            </li>
+            <li>
+              <strong>Belief in All Divine Revelations:</strong> Accepting the
+              Qur'an and all prior scriptures.
+            </li>
+            <li>
+              <strong>Certainty in the Hereafter:</strong> Firm conviction in
+              resurrection and accountability.
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="sq-card">
+        <div class="sq-question">
+          <span>Q2.</span> What does "sealed their hearts" mean?
+        </div>
+        <div class="sq-answer">
+          It means the disbelievers' persistent rejection of truth has caused
+          their inner abilities to recognize guidance to break down. Their
+          hearts, ears, and eyes become spiritually closed—not because Allah
+          forced them, but because they continuously refused to believe even
+          after the truth became clear.
+        </div>
+      </div>
+
+      <div class="sq-card">
+        <div class="sq-question">
+          <span>Q3.</span> Describe one parable used for hypocrites.
+        </div>
+        <div class="sq-answer">
+          One parable compares them to people who light a fire for warmth. When
+          it brightens their surroundings, Allah removes the light, leaving them
+          in total darkness. This symbolizes that hypocrites appear to have
+          faith briefly, but because their belief is insincere, it fades and
+          leaves them anxious and facing punishment.
+        </div>
+      </div>
+
+      <div class="sq-card">
+        <div class="sq-question">
+          <span>Q4.</span> How do hypocrites try to deceive Allah and the
+          believers?
+        </div>
+        <div class="sq-answer">
+          They openly profess faith while hypocrisy persists deep inside. They
+          attend prayers and speak like believers, hoping for worldly benefits
+          or safety. However, Allah knows their true intentions, so their
+          deception harms only themselves.
+        </div>
+      </div>
+
+      <div class="sq-card">
+        <div class="sq-question">
+          <span>Q5.</span> What is the key difference between disbelief and
+          hypocrisy?
+        </div>
+        <div class="sq-answer">
+          Disbelief is open rejection — the position is clear. Hypocrisy is far
+          more dangerous because it is hidden; a hypocrite pretends to believe
+          while harbouring malice within. This erodes trust inside a community
+          and corrupts collective faith.
+        </div>
+      </div>
+
+      <!-- ==================== SECTION VI ==================== -->
+      <h2>VI. Detailed Analytical Long-Answer Module</h2>
+
+      <div class="lq-card">
+        <div class="lq-question">
+          <span>Q1.</span> Explain the three categories of people in the opening
+          verses of Surah Al-Baqarah. How does each group respond to divine
+          guidance?
+        </div>
+        <div class="lq-answer">
+          <p>
+            In the opening twenty verses, Allah divides mankind into three
+            distinct spiritual categories:
+          </p>
+          <ul>
+            <li>
+              <strong>The Believers:</strong> Accept guidance with full
+              sincerity. They believe in the unseen, perform prayers, practice
+              charity, accept all revelations, and remain conscious of the
+              Hereafter. For them, the Qur'an is a source of direct guidance and
+              success.
+            </li>
+            <li>
+              <strong>The Disbelievers:</strong> Deliberately reject clear
+              truth. Their hearts, hearing, and vision are sealed — not from
+              lack of evidence, but from pride and stubbornness. They remain in
+              spiritual darkness and face severe punishment.
+            </li>
+            <li>
+              <strong>The Hypocrites:</strong> The most dangerous group. They
+              pretend to believe but conceal disbelief. Compared to a fire that
+              goes out or a storm of alternating light and darkness. Their
+              response to revelation determines a destiny of either spiritual
+              light or ultimate loss.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lq-card">
+        <div class="lq-question">
+          <span>Q2.</span> Discuss the characteristics and spiritual
+          consequences of hypocrisy in Surah Al-Baqarah.
+        </div>
+        <div class="lq-answer">
+          <p>
+            In verses 8–20, hypocrites claim belief in Allah and the Last Day,
+            but their hearts remain empty of faith:
+          </p>
+          <ul>
+            <li>
+              <strong>Spiritual Disease:</strong> Inner corruption worsens
+              through lies and self-interest.
+            </li>
+            <li>
+              <strong>False Reformation:</strong> They claim to reform society
+              but spread corruption, mock believers, and waver between faith and
+              disbelief.
+            </li>
+            <li>
+              <strong>Consequences:</strong> Loss of the soul's direction,
+              destruction of community trust, anxiety, Allah's anger, and
+              ultimately severe punishment in the Hereafter.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lq-card">
+        <div class="lq-question">
+          <span>Q3.</span> Analyze how Surah Al-Baqarah connects faith, worship,
+          and moral action in describing believers.
+        </div>
+        <div class="lq-answer">
+          <p>
+            The opening verses show that faith, worship, and moral action are
+            inseparable:
+          </p>
+          <ul>
+            <li>
+              <strong>Internal Faith:</strong> Deep conviction in Allah, angels,
+              revelation, and the Hereafter.
+            </li>
+            <li>
+              <strong>Consistent Worship:</strong> Regular prayer brings
+              discipline, humility, and connection with the Creator.
+            </li>
+            <li>
+              <strong>Moral Actions:</strong> Charity reflects social
+              responsibility and compassion.
+            </li>
+            <li>
+              <strong>Universal Respect for Truth:</strong> Belief in all
+              revelations shows openness to the continuity of prophethood.
+            </li>
+          </ul>
+          <p>
+            The authentic believer balances internal faith with outward deeds.
+            Worship strengthens character; moral action proves sincerity. The
+            reward is guidance and success in both worlds.
+          </p>
+        </div>
+      </div>
+
+      <!-- ==================== SECTION VII — NEW ==================== -->
+      <h2>VII. The Story of the Creation of Adam (A.S.)</h2>
+
+      <div class="topic-overview">
+        <p>
+          Prophet Adam (A.S.) was the first human and the first prophet. The
+          Qur'an reveals the beginning of human existence and Allah's purpose in
+          making him His vicegerent on earth. When Allah informed the angels of
+          His plan, they expressed wonder at how a being capable of mischief and
+          bloodshed could be made a vicegerent. Allah replied that He knows what
+          they do not know — highlighting His perfect wisdom.
+        </p>
+        <p>
+          Allah then taught Adam the names of all things, symbolizing knowledge,
+          intellect, and language — the distinguishing features of humanity.
+          When the angels could not name the same things, they admitted their
+          inability, and Allah demonstrated Adam's superiority based on
+          knowledge and intellect.
+        </p>
+        <p>
+          The angels were commanded to prostrate before Adam as a mark of
+          respect. All obeyed except <strong>Iblis (Satan)</strong>, who refused
+          due to arrogance, claiming superiority because he was made from fire
+          while Adam was created from clay. His disobedience became the first
+          act of pride and rebellion against divine command.
+        </p>
+        <p>
+          Adam and his wife were placed in Paradise with complete freedom except
+          for one prohibition: not to approach a specific tree. Satan deceived
+          them into tasting its fruit, leading to their departure from Paradise
+          to earth. However, Allah accepted their repentance, promising that
+          guidance would always follow their descendants — those who follow it
+          will find success, while those who reject it will face punishment.
+          This passage marks the origin of humanity, the first testing
+          environment, and remains essential to understanding human identity and
+          responsibility.
+        </p>
+      </div>
+
+      <h3>Detailed Discussion</h3>
+
+      <div class="detail-card">
+        <h3>
+          <span class="num">1</span> The Appointment of Adam as Vicegerent
+          (Khalifah)
+        </h3>
+        <p>
+          Allah announced to the angels,
+          <em>"I am going to place a vicegerent on earth."</em> The angels
+          questioned the wisdom of creating a being capable of causing
+          bloodshed, contrasting it with their own continuous worship. Allah
+          replied that He knows what they do not know — signifying that the
+          human race would produce prophets, righteous servants, and individuals
+          capable of choice, learning, and self-restraint.
+        </p>
+        <p>
+          The term <strong>Khalifah</strong> means one who represents and
+          manages affairs on Allah's guidance. This role gives humans authority
+          to use earth's resources, exercise reason, and uphold justice.
+        </p>
+      </div>
+
+      <div class="detail-card">
+        <h3>
+          <span class="num">2</span> The Gift of Knowledge (Verses 2:31–33)
+        </h3>
+        <p>
+          Allah taught Adam <em>"the names of all things,"</em> symbolizing the
+          gift of knowledge and language — capacities that elevate humans above
+          all creation. When Allah asked the angels to name these things, they
+          confessed ignorance:
+          <em>"We have no knowledge except what You have taught us."</em>
+        </p>
+        <p>
+          Adam, however, named them all, proving that human superiority lies not
+          in physical strength but in knowledge, understanding, and free will.
+          Knowledge in this context represents responsibility; it must be used
+          for good, not corruption. Thus, Adam passed his first test,
+          demonstrating his potential as a vicegerent.
+        </p>
+      </div>
+
+      <div class="detail-card">
+        <h3>
+          <span class="num">3</span> The Command to Prostrate and Iblis's
+          Refusal
+        </h3>
+        <p>
+          Allah commanded the angels to bow before Adam as an honour of the
+          divine act of creation. All obeyed except Iblis, who refused out of
+          pride, saying:
+          <em
+            >"I am better than him. You created me from fire and him from
+            clay."</em
+          >
+        </p>
+        <p>
+          His arrogance became the source of his downfall and the beginning of
+          evil. He was expelled from divine mercy but vowed to mislead Adam and
+          his descendants until the Day of Judgment. This moment highlights that
+          <strong>pride and envy are the roots of all disobedience</strong>. The
+          Qur'an uses Iblis's story as a timeless warning against arrogance and
+          rebellion against truth.
+        </p>
+      </div>
+
+      <div class="detail-card">
+        <h3><span class="num">4</span> Life in Paradise and the Test</h3>
+        <p>
+          Adam and his wife were allowed to live peacefully in Paradise,
+          enjoying everything except the fruit of one specific tree. Satan
+          deceived them into tasting it by whispering lies and false promises of
+          immortality. This act of disobedience led to their removal from
+          Paradise.
+        </p>
+        <p>
+          The Qur'an does not portray this as a permanent inherited sin but as a
+          <strong>test</strong> — a demonstration of human susceptibility to
+          error and the beginning of earthly life.
+        </p>
+      </div>
+
+      <div class="detail-card">
+        <h3><span class="num">5</span> Repentance and Allah's Mercy</h3>
+        <p>
+          After their disobedience, Adam and his wife realized their mistake and
+          turned repentantly, saying:
+          <em
+            >"Our Lord, we have wronged ourselves. If You do not forgive us and
+            have mercy upon us, we will surely be among the losers."</em
+          >
+        </p>
+        <p>
+          Allah accepted their repentance, showing them the words of forgiveness
+          and promising continued guidance for humanity. Those who follow that
+          guidance will live without fear or grief; those who reject it will go
+          astray and suffer. This marks the beginning of the human story — not
+          as a tale of punishment, but as a
+          <strong>lesson in divine mercy, free will, and accountability</strong
+          >.
+        </p>
+      </div>
+
+      <h3>Key Takeaways</h3>
+      <div class="takeaway-grid">
+        <div class="takeaway-item">
+          <div class="takeaway-num">1</div>
+          <div class="takeaway-text">
+            Humanity is honoured as Allah's vicegerent (<em>Khalifah</em>) on
+            earth, entrusted with stewardship and justice.
+          </div>
+        </div>
+        <div class="takeaway-item">
+          <div class="takeaway-num">2</div>
+          <div class="takeaway-text">
+            Knowledge is the foundation of human superiority and responsibility
+            — it must serve good, not corruption.
+          </div>
+        </div>
+        <div class="takeaway-item">
+          <div class="takeaway-num">3</div>
+          <div class="takeaway-text">
+            Pride and arrogance, as shown by Iblis, are the root causes of
+            spiritual downfall and rebellion.
+          </div>
+        </div>
+        <div class="takeaway-item">
+          <div class="takeaway-num">4</div>
+          <div class="takeaway-text">
+            Satan's whispers remain the constant struggle between human free
+            will and divine truth.
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================== FOOTER ==================== -->
+      <footer>
+        <span class="name">Rehan Gohar</span>
+      </footer>
+    </div>
+  </body>
+</html>
