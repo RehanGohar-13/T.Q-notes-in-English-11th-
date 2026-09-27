@@ -5,6 +5,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Surah Al-Baqarah | Cosmic Study Notes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
       :root {
         --void: #0a0e27;
@@ -138,7 +144,6 @@
         right: -80px;
         animation: float2 25s ease-in-out infinite;
       }
-
       @keyframes float1 {
         0%,
         100% {
@@ -172,6 +177,7 @@
         z-index: 1;
       }
 
+      /* Nav */
       .back-nav {
         margin-bottom: 25px;
       }
@@ -195,6 +201,7 @@
         transform: translateX(-4px);
       }
 
+      /* Header */
       header {
         border-bottom: 1px solid var(--border-glow);
         padding-bottom: 25px;
@@ -211,8 +218,10 @@
         background: linear-gradient(90deg, var(--gold-star), transparent);
       }
       header h1 {
-        font-size: 2.4rem;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 2.6rem;
         letter-spacing: -0.5px;
+        font-weight: 700;
         background: linear-gradient(
           135deg,
           var(--moonlight),
@@ -223,13 +232,21 @@
         -webkit-text-fill-color: transparent;
         background-clip: text;
       }
+      .header-arabic {
+        font-family: "Amiri", serif;
+        font-size: 1.6rem;
+        color: var(--gold-star);
+        direction: rtl;
+        margin-top: 5px;
+        opacity: 0.85;
+      }
       .subtitle {
         color: var(--gold-star);
         font-size: 1rem;
         font-weight: 600;
         text-transform: uppercase;
         letter-spacing: 1px;
-        margin-top: 6px;
+        margin-top: 8px;
       }
       .meta-badge-row {
         display: flex;
@@ -247,6 +264,7 @@
         color: var(--stardust);
       }
 
+      /* Section Headings */
       h2 {
         color: var(--moonlight);
         font-size: 1.5rem;
@@ -281,6 +299,105 @@
         font-weight: 500;
       }
 
+      /* Learning Outcomes Card */
+      .learning-outcomes {
+        background: linear-gradient(
+          135deg,
+          rgba(52, 211, 153, 0.1),
+          rgba(107, 70, 193, 0.08)
+        );
+        border: 1px solid rgba(52, 211, 153, 0.25);
+        border-radius: 16px;
+        padding: 25px 30px;
+        margin: 25px 0;
+        position: relative;
+        overflow: hidden;
+      }
+      .learning-outcomes::before {
+        content: "";
+        position: absolute;
+        top: -40px;
+        right: -40px;
+        width: 120px;
+        height: 120px;
+        background: radial-gradient(
+          circle,
+          rgba(52, 211, 153, 0.15),
+          transparent
+        );
+        border-radius: 50%;
+      }
+      .lo-title {
+        color: var(--aurora);
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .learning-outcomes ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .learning-outcomes ul li {
+        padding: 6px 0 6px 24px;
+        position: relative;
+        color: var(--text-glow);
+        font-size: 0.95rem;
+      }
+      .learning-outcomes ul li::before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: var(--aurora);
+        font-weight: 700;
+      }
+
+      /* Hadith Card */
+      .hadith-card {
+        background: linear-gradient(
+          135deg,
+          rgba(251, 191, 36, 0.08),
+          rgba(244, 114, 182, 0.05)
+        );
+        border: 1px solid rgba(251, 191, 36, 0.25);
+        border-left: 4px solid var(--gold-star);
+        border-radius: 12px;
+        padding: 20px 24px;
+        margin: 18px 0;
+        position: relative;
+      }
+      .hadith-card::before {
+        content: "❝";
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        font-size: 2.5rem;
+        color: var(--gold-star);
+        opacity: 0.25;
+        font-family: "Cormorant Garamond", serif;
+        line-height: 1;
+      }
+      .hadith-text {
+        color: var(--text-glow);
+        font-size: 0.98rem;
+        padding-left: 30px;
+        font-style: italic;
+        line-height: 1.7;
+      }
+      .hadith-source {
+        display: block;
+        text-align: right;
+        color: var(--stardust);
+        font-size: 0.85rem;
+        margin-top: 10px;
+        font-style: normal;
+        font-weight: 600;
+      }
+
+      /* Highlight Boxes */
       .callout-box {
         background: linear-gradient(
           135deg,
@@ -320,6 +437,7 @@
         margin-bottom: 0;
       }
 
+      /* Tree Structure */
       .tree-structure {
         background: rgba(10, 14, 39, 0.5);
         border: 1px solid var(--border-glow);
@@ -370,6 +488,57 @@
         font-style: normal;
       }
 
+      /* Practical Points Grid */
+      .practical-grid {
+        display: grid;
+        gap: 14px;
+        margin: 20px 0;
+      }
+      .practical-item {
+        background: rgba(10, 14, 39, 0.5);
+        border: 1px solid var(--border-glow);
+        border-radius: 12px;
+        padding: 16px 20px;
+        display: flex;
+        gap: 15px;
+        align-items: flex-start;
+        transition: all 0.3s;
+      }
+      .practical-item:hover {
+        border-color: var(--gold-star);
+        transform: translateX(4px);
+      }
+      .practical-num {
+        background: linear-gradient(135deg, var(--cosmic-purple), var(--nova));
+        color: white;
+        font-weight: 700;
+        min-width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        flex-shrink: 0;
+      }
+      .practical-text {
+        color: var(--text-glow);
+        font-size: 0.95rem;
+        line-height: 1.5;
+      }
+      .practical-ref {
+        display: inline-block;
+        margin-top: 6px;
+        background: rgba(251, 191, 36, 0.1);
+        border: 1px solid rgba(251, 191, 36, 0.25);
+        color: var(--gold-star);
+        padding: 2px 10px;
+        border-radius: 12px;
+        font-size: 0.78rem;
+        font-weight: 600;
+      }
+
+      /* Table */
       .summary-table {
         width: 100%;
         border-collapse: separate;
@@ -414,6 +583,7 @@
         font-weight: 500;
       }
 
+      /* MCQ Cards */
       .q-card {
         background: rgba(10, 14, 39, 0.5);
         border: 1px solid var(--border-glow);
@@ -466,6 +636,7 @@
         transform: translateY(-2px);
       }
 
+      /* Short Answer Cards */
       .sq-card {
         background: rgba(26, 31, 78, 0.3);
         border: 1px solid rgba(167, 139, 250, 0.15);
@@ -504,6 +675,7 @@
         color: var(--text-glow);
       }
 
+      /* Long Answer Cards */
       .lq-card {
         background: rgba(26, 31, 78, 0.35);
         border: 1px solid rgba(167, 139, 250, 0.2);
@@ -576,7 +748,7 @@
         font-size: 1.02rem;
       }
 
-      /* Topic Narrative Cards (for Adam story) */
+      /* Topic Overview */
       .topic-overview {
         background: linear-gradient(
           135deg,
@@ -700,6 +872,7 @@
         line-height: 1.5;
       }
 
+      /* Details/Reveal */
       details.answer-details {
         margin-top: 15px;
       }
@@ -788,164 +961,380 @@
       </div>
 
       <header>
-        <h1>Surah Al-Baqarah (سورة البقرة)</h1>
-        <div class="subtitle">✦ Academic Study Guide & Question Bank ✦</div>
+        <h1>Surah Al-Baqarah</h1>
+        <div class="header-arabic">سُورَةُ الْبَقَرَةِ</div>
+        <div class="subtitle">✦ Introduction, Themes & Study Guide ✦</div>
         <div class="meta-badge-row">
           <span class="meta-badge">📖 Surah #02</span>
           <span class="meta-badge">📍 Madani</span>
           <span class="meta-badge">🔢 286 Verses</span>
           <span class="meta-badge">📜 40 Rukus</span>
-          <span class="meta-badge">⏱️ 1 AH – 10 AH</span>
+          <span class="meta-badge">🌟 Longest Surah</span>
         </div>
       </header>
 
-      <!-- ==================== SECTION I ==================== -->
-      <h2>I. Strategic Overview & Objectives</h2>
+      <!-- ── LEARNING OUTCOMES ── -->
+      <div class="learning-outcomes">
+        <div class="lo-title">🎯 Learning Outcomes</div>
+        <p
+          style="
+            color: var(--text-glow);
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+          "
+        >
+          After studying this Surah, students will be able to:
+        </p>
+        <ul>
+          <li>Follow the etiquettes of reciting the Holy Qur'an.</li>
+          <li>
+            Introduce Surah Al-Baqarah with its background and significance.
+          </li>
+          <li>
+            Extract the central themes and key points of Surah Al-Baqarah.
+          </li>
+          <li>
+            Perform an idiomatic translation of Surah Al-Baqarah with proper
+            understanding.
+          </li>
+          <li>
+            Prepare selected verses for examination through accurate
+            translation.
+          </li>
+          <li>
+            Know the meanings of selected Qur'anic vocabulary from this Surah.
+          </li>
+          <li>
+            Memorize the Qur'anic supplications mentioned in Surah Al-Baqarah
+            along with their translations.
+          </li>
+        </ul>
+      </div>
+
+      <!-- ── SECTION I: INTRODUCTION ── -->
+      <h2>I. Introduction & Distinctive Features</h2>
+
       <p>
-        <strong>Surah Al-Baqarah ("The Cow")</strong> is the longest chapter of
-        the Holy Qur'an. Revealed primarily during the early Madinan period
-        following the <em>Hijrah</em>, it lays down the comprehensive
-        legislative, economic, moral, and social foundation of the emerging
-        Muslim community (<em>Ummah</em>).
-      </p>
-      <p>
-        The central theme centers on
-        <strong
-          >guidance (<em>Hidayah</em>), covenantal stewardship of the Earth
-          (<em>Khilafah</em>), and total submission to divine
-          legislation</strong
-        >. The narrative contrasts the historical failure of previous nations to
-        preserve their covenants with the responsibilities placed upon the new
-        universal Muslim community.
+        <strong>Surah Al-Baqarah</strong> is the
+        <strong>second Surah</strong> of the Holy Qur'an in the order of
+        arrangement and the <strong>longest chapter</strong>, containing a total
+        of <strong>286 verses</strong>.
       </p>
 
-      <!-- ==================== SECTION II ==================== -->
-      <h2>II. Thematic Flowchart & Structural Divisions</h2>
+      <p>
+        The Surah begins with <em>Huruf-e-Muqatta'at</em> (the disjointed
+        letters). These are letters appearing at the beginning of certain
+        Qur'anic chapters whose true meanings are known only to
+        <strong>Allah</strong> and <strong>Prophet Muhammad ﷺ</strong>.
+      </p>
+
+      <p>
+        In <strong>verses 67 to 73</strong>, the Surah narrates the story of the
+        cow that <em>Bani Israel</em> were commanded to slaughter — which is why
+        the Surah is named <strong>Al-Baqarah</strong> ("The Cow"), since
+        "Baqarah" in Arabic means "cow". This event contains many wisdoms, the
+        most important being that
+        <strong>Allah has complete power to resurrect people after death</strong
+        >.
+      </p>
+
+      <p>
+        When Prophet Muhammad ﷺ migrated to <strong>Madinah</strong>, this Surah
+        was revealed. The people of Madinah being addressed by the message of
+        Islam were different from those in Makkah. The requirements and demands
+        of *da'wah* had entered a new stage. Therefore, the topics and themes of
+        this Surah differ significantly from those revealed during the
+        <strong>Makkan period</strong>.
+      </p>
+
+      <!-- ── SECTION II: MERITS (HADITH SECTION) ── -->
+      <h2>II. Merits & Virtues of Surah Al-Baqarah</h2>
+
+      <p>
+        Surah Al-Baqarah is a chapter of tremendous virtue. In the time of the
+        noble Companions (<em>Sahaba رضی اللہ عنہم</em>), anyone who was a
+        scholar of Surah Al-Baqarah and Surah Ali 'Imran was regarded as truly
+        great and worthy of respect. <em>(Musnad Ahmad: 12216)</em>
+      </p>
+
+      <div class="hadith-card">
+        <div class="hadith-text">
+          "Do not turn your houses into graveyards (that is, do not leave them
+          empty of remembrance and recitation). Indeed, Satan does not enter a
+          house in which Surah Al-Baqarah is recited."
+          <span class="hadith-source">— Sahih Muslim: 780</span>
+        </div>
+      </div>
+
+      <div class="hadith-card">
+        <div class="hadith-text">
+          "Everything has a peak, and the peak of the Qur'an is Surah
+          Al-Baqarah."
+          <span class="hadith-source">— Jami' Tirmidhi: 2878</span>
+        </div>
+      </div>
+
+      <div class="hadith-card">
+        <div class="hadith-text">
+          "Recite Surah Al-Baqarah, for reciting it is a blessing, and
+          abandoning it is a cause of regret and misfortune. The people of
+          falsehood (magicians, fortune-tellers, and deceivers) have no power
+          over it — their deception has no effect."
+          <span class="hadith-source">— Sahih Muslim: 804</span>
+        </div>
+      </div>
+
+      <div class="hadith-card">
+        <div class="hadith-text">
+          "Whoever gains knowledge of the seven long Surahs of the Qur'an has
+          become a great scholar."
+          <span class="hadith-source">— Musnad Ahmad: 24531</span>
+        </div>
+      </div>
+
+      <div class="hadith-card">
+        <div class="hadith-text">
+          "Whoever recites the last two verses of Surah Al-Baqarah at night
+          before sleeping, they will be sufficient for him."
+          <span class="hadith-source">— Sahih Bukhari: 5009</span>
+        </div>
+      </div>
+
+      <div class="callout-box">
+        <div class="callout-title">📚 Depth of Study</div>
+        <p>
+          The depth and breadth of Surah Al-Baqarah's subjects can be gauged
+          from the fact that
+          <strong>Hazrat Umar bin Khattab (رضی اللہ عنہ)</strong>, a Companion
+          of the highest rank, took <strong>12 years</strong> to fully master
+          this Surah, while his son
+          <strong>Hazrat Abdullah bin Umar (رضی اللہ عنہ)</strong> mastered it
+          along with all its themes in <strong>8 years</strong>.
+        </p>
+      </div>
+
+      <!-- ── SECTION III: AYAT AL-KURSI ── -->
+      <h2>III. The Virtue of Ayat al-Kursi</h2>
+
+      <p>
+        <strong>Ayat al-Kursi (آیَةُ الْكُرْسِيِّ)</strong> is a verse of great
+        virtue in the Holy Qur'an and is regarded as the
+        <strong>chief of all verses</strong>. It is
+        <strong>verse number 255</strong> of Surah Al-Baqarah.
+      </p>
+
+      <div class="hadith-card">
+        <div class="hadith-text">
+          "Whoever recites Ayat al-Kursi after every obligatory prayer, nothing
+          prevents him from entering Paradise except death."
+          <span class="hadith-source">— Sahih at-Targhib wat-Tarhib: 1595</span>
+        </div>
+      </div>
+
+      <div class="hadith-card">
+        <div class="hadith-text">
+          "When you go to your bed, recite Ayat al-Kursi. A protector from Allah
+          will be appointed for you until morning, and Satan will not come near
+          you."
+          <span class="hadith-source">— Sahih Bukhari: 5010</span>
+        </div>
+      </div>
+
+      <p>
+        Ayat al-Kursi describes
+        <strong>the Oneness of Allah (Tawheed)</strong> — His absolute
+        uniqueness — along with a comprehensive description of
+        <em>Allah's power and divine attributes</em>.
+      </p>
+
+      <!-- ── SECTION IV: CENTRAL THEMES ── -->
+      <h2>IV. Central Themes & Key Points</h2>
+
+      <p>
+        The
+        <strong
+          >central theme of Surah Al-Baqarah is "Guidance" (Hidayah)</strong
+        >.
+      </p>
+
+      <p>
+        At the very beginning of Surah Al-Baqarah, the qualities of those people
+        are described who possess the capacity to receive guidance from the Holy
+        Qur'an.
+      </p>
+
+      <p>
+        The Surah makes it clear that just as Allah previously sent books
+        through prophets for humanity's guidance, He has similarly sent Prophet
+        Muhammad ﷺ with the Qur'an. It is made evident that
+        <strong
+          >a claim of faith is not accepted without believing in Prophet
+          Muhammad ﷺ</strong
+        >. Therefore, mankind is commanded to believe in the Qur'an and the
+        Bearer of the Qur'an ﷺ, and to obey them completely.
+      </p>
+
+      <h3>Structural Themes Overview</h3>
       <div class="tree-structure">
         <ul>
           <li>
-            🪐 Phase 1: The Three Archetypes of Humanity (Verses 1–20)
+            🪐 Foundational Beliefs (Aqeedah)
             <ul>
               <li>
-                <strong>Verses 1–5:</strong> Attributes of
-                <em>Al-Muttaqun</em> (The God-Conscious).
+                Surah Al-Baqarah begins with the fundamental beliefs of Islam:
+                <strong>Tawheed</strong> (Oneness of Allah),
+                <strong>Risalah</strong> (Prophethood), and
+                <strong>Akhirah</strong> (Hereafter).
               </li>
               <li>
-                <strong>Verses 6–7:</strong> Profile of persistent disbelievers
-                (<em>Al-Kafirun</em>).
-              </li>
-              <li>
-                <strong>Verses 8–20:</strong> Detailed psychology and parables
-                of the Hypocrites (<em>Al-Munafiqun</em>).
+                In this context, the three categories of people are described:
+                <em
+                  >Believers (Mu'minun), Disbelievers (Kafirun), and Hypocrites
+                  (Munafiqun)</em
+                >.
               </li>
             </ul>
           </li>
           <li>
-            🌌 Phase 2: Universal Call to Tawheed & Creation of Man (Verses
-            21–39)
+            🌌 Creation of Adam (A.S.)
             <ul>
               <li>
-                The first universal command:
-                <em>"O mankind, worship your Lord..."</em> (v. 21).
-              </li>
-              <li>
-                The challenge to produce a single chapter like the Qur'an (vv.
-                23–24).
-              </li>
-              <li>
-                The appointment of Adam (A.S.) as Earth's vicegerent
-                (<em>Khalifah</em>) and the arrogance of Iblis.
+                The event of Prophet Adam's creation is described so that humans
+                may understand
+                <strong>the purpose of their own creation</strong>.
               </li>
             </ul>
           </li>
           <li>
-            ⭐ Phase 3: The Historical Covenant & Bani Israel (Verses 40–123)
+            ⭐ Discourse with Bani Israel
             <ul>
               <li>
-                Review of divine favors, deliverances from Pharaoh, and
-                recurrent breaches of covenant.
+                A long series of verses is primarily addressed to
+                <strong>the Jews</strong>, who lived in large numbers around
+                Madinah.
               </li>
               <li>
-                The Calf incident, the Sabbath transgression, and spiritual
-                callousness of the heart.
-              </li>
-              <li>
-                <strong>The Lesson of the Cow (vv. 67–73):</strong> Skepticism
-                vs. sincere obedience.
+                Detailed accounts of the blessings Allah bestowed upon them and
+                how they responded with ingratitude and disobedience.
               </li>
             </ul>
           </li>
           <li>
-            ✨ Phase 4: Abrahamic Legacy & The Central Qiblah (Verses 124–167)
+            ✨ Ibrahim (A.S.) & the Qiblah
             <ul>
               <li>
-                Trial and leadership of Prophet Ibrahim (A.S.);
-                foundation-laying of the Ka'bah.
+                Near the end of the first *Para*, Prophet Ibrahim (A.S.) is
+                mentioned because not only Jews and Christians but also the
+                pagan Arabs regarded him as their leader.
               </li>
               <li>
-                The official change of the prayer direction (<em>Qiblah</em>)
-                from Jerusalem to Makkah (vv. 142–150).
+                All are reminded that Ibrahim was a firm believer in
+                <strong>pure monotheism</strong> and never tolerated any form of
+                *shirk*.
               </li>
               <li>
-                Declaration of the <em>Ummatan Wasata</em> (a balanced,
-                middle-path nation).
+                The topics of the
+                <strong>construction of the Ka'bah</strong> and its
+                establishment as the <strong>Qiblah</strong> are discussed in
+                this context.
               </li>
             </ul>
           </li>
           <li>
-            🌠 Phase 5: Comprehensive Fiqh & Civil Ordinances (Verses 168–242)
+            🌠 Islamic Rulings (Ahkam)
             <ul>
               <li>
-                <strong>Al-Birr (v. 177):</strong> The comprehensive definition
-                of true righteousness.
-              </li>
-              <li>
-                Legislative mandates: <em>Qisas</em>, Fasting of Ramadan (vv.
-                183–187), and Hajj (vv. 196–203).
-              </li>
-              <li>
-                Family Code: Marriage, divorce (<em>Talaq</em>), <em>Iddah</em>,
-                breastfeeding, and maintenance.
+                Many rulings regarding Muslims' individual and collective lives
+                — from acts of worship to social conduct, family matters, and
+                governance.
               </li>
             </ul>
           </li>
           <li>
-            💫 Phase 6: Financial Ethics, Sovereign Authority & Creed (Verses
-            243–286)
+            💫 Prohibition of Riba (Interest)
             <ul>
               <li>
-                Historical struggles: Talut (Saul), Jalut (Goliath), and the
-                young Dawud (A.S.).
+                Among the evils strongly condemned in Surah Al-Baqarah is
+                <strong>Riba (interest/usury)</strong> — declared as an
+                <em>act of war against Allah and His Messenger ﷺ</em>.
               </li>
               <li>
-                <strong>Ayat al-Kursi (v. 255):</strong> The Throne Verse
-                declaring Absolute Divine Sovereignty.
-              </li>
-              <li>
-                Sadaqah contrasted with the outright condemnation of
-                <em>Riba</em> (vv. 275–281).
-              </li>
-              <li>
-                <strong>Ayat al-Mudayanah (v. 282):</strong> The longest single
-                verse regarding contracts.
-              </li>
-              <li>
-                <strong>Closing Supplication (vv. 285–286):</strong> Declaration
-                of faith and supplication for ease.
+                Riba causes society to suffer from
+                <strong
+                  >poverty, laziness, extravagance, and heartlessness</strong
+                >. It widens the gap between rich and poor. Helpless people
+                burdened by debt often commit terrible sins like suicide.
               </li>
             </ul>
           </li>
         </ul>
       </div>
 
-      <!-- ==================== SECTION III ==================== -->
-      <h2>III. Core Theological Landmark Verses</h2>
+      <!-- ── SECTION V: PRACTICAL WISDOM ── -->
+      <h2>V. Scholarly & Practical Points</h2>
+      <p>
+        Among the scholarly and practical lessons derived from studying Surah
+        Al-Baqarah, some are as follows:
+      </p>
+
+      <div class="practical-grid">
+        <div class="practical-item">
+          <div class="practical-num">1</div>
+          <div class="practical-text">
+            The expression of faith is through action, and the foremost action
+            is <strong>establishing prayer (Salat)</strong>.
+            <span class="practical-ref">Surah Al-Baqarah: 3</span>
+          </div>
+        </div>
+        <div class="practical-item">
+          <div class="practical-num">2</div>
+          <div class="practical-text">
+            Allah misguides those who
+            <strong
+              >break their covenant with Him, sever family ties, and cause
+              corruption on earth</strong
+            >.
+            <span class="practical-ref">Surah Al-Baqarah: 26-27</span>
+          </div>
+        </div>
+        <div class="practical-item">
+          <div class="practical-num">3</div>
+          <div class="practical-text">
+            <strong
+              >Disobeying Allah's command and showing arrogance is a satanic
+              behaviour</strong
+            >
+            — exemplified by Iblis.
+            <span class="practical-ref">Surah Al-Baqarah: 34</span>
+          </div>
+        </div>
+        <div class="practical-item">
+          <div class="practical-num">4</div>
+          <div class="practical-text">
+            Human greatness lies in that when a mistake or error occurs, one
+            <strong>immediately turns to Allah in repentance</strong>.
+            <span class="practical-ref">Surah Al-Baqarah: 37</span>
+          </div>
+        </div>
+        <div class="practical-item">
+          <div class="practical-num">5</div>
+          <div class="practical-text">
+            In hardships and calamities, seeking Allah's help through
+            <strong>patience (Sabr) and prayer (Salat)</strong> is the way of
+            the believers.
+            <span class="practical-ref">Surah Al-Baqarah: 45</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── SECTION VI: LANDMARK VERSES TABLE ── -->
+      <h2>VI. Core Theological Landmark Verses</h2>
       <table class="summary-table">
         <thead>
           <tr>
             <th>Verse</th>
             <th>Title / Concept</th>
-            <th>Core Significance & Doctrinal Insight</th>
+            <th>Core Significance</th>
           </tr>
         </thead>
         <tbody>
@@ -953,48 +1342,48 @@
             <td><strong>2:143</strong></td>
             <td><em>Ummatan Wasata</em></td>
             <td>
-              Positions the Muslim Ummah as a balanced, moderate, and exemplary
-              witness over all mankind.
+              Positions the Muslim Ummah as a balanced, moderate, exemplary
+              witness over mankind.
             </td>
           </tr>
           <tr>
             <td><strong>2:177</strong></td>
             <td><em>Ayat al-Birr</em></td>
             <td>
-              Synthesizes true piety: integrating correct theological creed with
-              practical socio-economic charity and patience.
+              Defines true piety: combining correct creed with practical charity
+              and patience.
             </td>
           </tr>
           <tr>
             <td><strong>2:255</strong></td>
             <td><em>Ayat al-Kursi</em></td>
             <td>
-              Supreme affirmation of <em>Tawheed</em>, Divine Self-Sufficiency
-              (<em>Al-Hayy, Al-Qayyum</em>), and infinite sovereignty.
+              Supreme affirmation of Tawheed, Divine Self-Sufficiency, and
+              infinite sovereignty.
             </td>
           </tr>
           <tr>
             <td><strong>2:256</strong></td>
             <td><em>La Ikraha fid-Deen</em></td>
             <td>
-              Foundational principle: "There is no compulsion in religion,"
-              establishing freedom of conscience.
+              "There is no compulsion in religion" — establishing freedom of
+              conscience.
             </td>
           </tr>
           <tr>
             <td><strong>2:282</strong></td>
             <td><em>Ayat al-Mudayanah</em></td>
             <td>
-              Longest verse in the Qur'an; establishes legal frameworks for
-              financial loan documentation and equity.
+              The longest verse in the Qur'an — legal framework for loan
+              documentation.
             </td>
           </tr>
           <tr>
             <td><strong>2:285–286</strong></td>
             <td><em>Aamana ar-Rasul</em></td>
             <td>
-              Affirmation of universal prophetic belief; establishes that Allah
-              never burdens a soul beyond its capacity.
+              Universal prophetic belief; Allah never burdens a soul beyond its
+              capacity.
             </td>
           </tr>
         </tbody>
@@ -1007,19 +1396,15 @@
         <p>
           Surah Al-Baqarah allocates only <strong>5 verses</strong> to Believers
           and <strong>2 verses</strong> for open Disbelievers, but dedicates
-          <strong>13 verses (8–20)</strong> to expose Hypocrites. It employs two
-          vivid similes:
-          <em
-            >the fire-kindler whose light is stripped away leaving him in
-            darkness</em
-          >, and
-          <em>the rainstorm filled with darkness, thunder, and lightning</em>,
-          illustrating paralyzing spiritual doubt and opportunism.
+          <strong>13 verses (8–20)</strong> to expose Hypocrites — through the
+          vivid parables of
+          <em>the fire-kindler whose light is stripped away</em>, and
+          <em>the rainstorm of darkness and lightning</em>.
         </p>
       </div>
 
-      <!-- ==================== SECTION IV ==================== -->
-      <h2>IV. Objective Evaluation Module (MCQ Bank)</h2>
+      <!-- ── SECTION VII: MCQ BANK ── -->
+      <h2>VII. Objective Evaluation Module (MCQ Bank)</h2>
 
       <div class="q-card">
         <div class="q-title">
@@ -1038,8 +1423,8 @@
             <strong>Correct Answer: (b) Verse 177</strong><br /><em
               >Explanation:</em
             >
-            Verse 177 breaks ritualism into core components: belief in Allah,
-            the Last Day, Angels, Books, Prophets, spending beloved wealth,
+            Verse 177 breaks piety into core components: belief in Allah, the
+            Last Day, Angels, Books, Prophets, spending beloved wealth,
             establishing prayer, giving Zakat, fulfilling covenants, and
             patience in adversity.
           </div>
@@ -1447,8 +1832,8 @@
         </details>
       </div>
 
-      <!-- ==================== SECTION V ==================== -->
-      <h2>V. Conceptual Short-Answer Module</h2>
+      <!-- ── SECTION VIII: SHORT ANSWERS ── -->
+      <h2>VIII. Conceptual Short-Answer Module</h2>
 
       <div class="sq-card">
         <div class="sq-question">
@@ -1533,8 +1918,8 @@
         </div>
       </div>
 
-      <!-- ==================== SECTION VI ==================== -->
-      <h2>VI. Detailed Analytical Long-Answer Module</h2>
+      <!-- ── SECTION IX: LONG ANSWERS ── -->
+      <h2>IX. Detailed Analytical Long-Answer Module</h2>
 
       <div class="lq-card">
         <div class="lq-question">
@@ -1637,8 +2022,8 @@
         </div>
       </div>
 
-      <!-- ==================== SECTION VII — NEW ==================== -->
-      <h2>VII. The Story of the Creation of Adam (A.S.)</h2>
+      <!-- ── SECTION X: STORY OF ADAM ── -->
+      <h2>X. The Story of the Creation of Adam (A.S.)</h2>
 
       <div class="topic-overview">
         <p>
@@ -1651,28 +2036,19 @@
         </p>
         <p>
           Allah then taught Adam the names of all things, symbolizing knowledge,
-          intellect, and language — the distinguishing features of humanity.
-          When the angels could not name the same things, they admitted their
-          inability, and Allah demonstrated Adam's superiority based on
-          knowledge and intellect.
-        </p>
-        <p>
-          The angels were commanded to prostrate before Adam as a mark of
-          respect. All obeyed except <strong>Iblis (Satan)</strong>, who refused
-          due to arrogance, claiming superiority because he was made from fire
-          while Adam was created from clay. His disobedience became the first
-          act of pride and rebellion against divine command.
+          intellect, and language — the distinguishing features of humanity. The
+          angels were commanded to prostrate before Adam. All obeyed except
+          <strong>Iblis (Satan)</strong>, who refused due to arrogance, claiming
+          superiority because he was made from fire while Adam was created from
+          clay. His disobedience became the first act of pride and rebellion
+          against divine command.
         </p>
         <p>
           Adam and his wife were placed in Paradise with complete freedom except
           for one prohibition: not to approach a specific tree. Satan deceived
-          them into tasting its fruit, leading to their departure from Paradise
-          to earth. However, Allah accepted their repentance, promising that
-          guidance would always follow their descendants — those who follow it
-          will find success, while those who reject it will face punishment.
-          This passage marks the origin of humanity, the first testing
-          environment, and remains essential to understanding human identity and
-          responsibility.
+          them into tasting its fruit, leading to their departure to earth.
+          However, Allah accepted their repentance, promising that guidance
+          would always follow their descendants.
         </p>
       </div>
 
@@ -1686,16 +2062,15 @@
         <p>
           Allah announced to the angels,
           <em>"I am going to place a vicegerent on earth."</em> The angels
-          questioned the wisdom of creating a being capable of causing
-          bloodshed, contrasting it with their own continuous worship. Allah
-          replied that He knows what they do not know — signifying that the
-          human race would produce prophets, righteous servants, and individuals
-          capable of choice, learning, and self-restraint.
+          questioned the wisdom, contrasting it with their own worship. Allah
+          replied that He knows what they do not know — signifying that humanity
+          would produce prophets and righteous servants capable of choice,
+          learning, and self-restraint.
         </p>
         <p>
           The term <strong>Khalifah</strong> means one who represents and
-          manages affairs on Allah's guidance. This role gives humans authority
-          to use earth's resources, exercise reason, and uphold justice.
+          manages affairs on Allah's guidance — giving humans authority to use
+          earth's resources, exercise reason, and uphold justice.
         </p>
       </div>
 
@@ -1707,15 +2082,13 @@
           Allah taught Adam <em>"the names of all things,"</em> symbolizing the
           gift of knowledge and language — capacities that elevate humans above
           all creation. When Allah asked the angels to name these things, they
-          confessed ignorance:
+          confessed:
           <em>"We have no knowledge except what You have taught us."</em>
         </p>
         <p>
-          Adam, however, named them all, proving that human superiority lies not
-          in physical strength but in knowledge, understanding, and free will.
-          Knowledge in this context represents responsibility; it must be used
-          for good, not corruption. Thus, Adam passed his first test,
-          demonstrating his potential as a vicegerent.
+          Adam named them all, proving that human superiority lies in knowledge,
+          understanding, and free will. Knowledge represents responsibility; it
+          must be used for good, not corruption.
         </p>
       </div>
 
@@ -1725,35 +2098,26 @@
           Refusal
         </h3>
         <p>
-          Allah commanded the angels to bow before Adam as an honour of the
-          divine act of creation. All obeyed except Iblis, who refused out of
-          pride, saying:
+          All angels obeyed except Iblis, who refused out of pride:
           <em
             >"I am better than him. You created me from fire and him from
             clay."</em
           >
         </p>
         <p>
-          His arrogance became the source of his downfall and the beginning of
-          evil. He was expelled from divine mercy but vowed to mislead Adam and
-          his descendants until the Day of Judgment. This moment highlights that
-          <strong>pride and envy are the roots of all disobedience</strong>. The
+          His arrogance became the source of his downfall.
+          <strong>Pride and envy are the roots of all disobedience</strong>. The
           Qur'an uses Iblis's story as a timeless warning against arrogance and
-          rebellion against truth.
+          rebellion.
         </p>
       </div>
 
       <div class="detail-card">
         <h3><span class="num">4</span> Life in Paradise and the Test</h3>
         <p>
-          Adam and his wife were allowed to live peacefully in Paradise,
-          enjoying everything except the fruit of one specific tree. Satan
-          deceived them into tasting it by whispering lies and false promises of
-          immortality. This act of disobedience led to their removal from
-          Paradise.
-        </p>
-        <p>
-          The Qur'an does not portray this as a permanent inherited sin but as a
+          Adam and his wife lived peacefully in Paradise, enjoying everything
+          except the fruit of one tree. Satan deceived them with false promises
+          of immortality. The Qur'an portrays this not as inherited sin but as a
           <strong>test</strong> — a demonstration of human susceptibility to
           error and the beginning of earthly life.
         </p>
@@ -1762,19 +2126,15 @@
       <div class="detail-card">
         <h3><span class="num">5</span> Repentance and Allah's Mercy</h3>
         <p>
-          After their disobedience, Adam and his wife realized their mistake and
-          turned repentantly, saying:
+          Adam and his wife repented:
           <em
             >"Our Lord, we have wronged ourselves. If You do not forgive us and
             have mercy upon us, we will surely be among the losers."</em
           >
         </p>
         <p>
-          Allah accepted their repentance, showing them the words of forgiveness
-          and promising continued guidance for humanity. Those who follow that
-          guidance will live without fear or grief; those who reject it will go
-          astray and suffer. This marks the beginning of the human story — not
-          as a tale of punishment, but as a
+          Allah accepted their repentance and promised continued guidance for
+          humanity. This marks the beginning of the human story — a
           <strong>lesson in divine mercy, free will, and accountability</strong
           >.
         </p>
@@ -1812,7 +2172,6 @@
         </div>
       </div>
 
-      <!-- ==================== FOOTER ==================== -->
       <footer>
         <span class="name">Rehan Gohar</span>
       </footer>

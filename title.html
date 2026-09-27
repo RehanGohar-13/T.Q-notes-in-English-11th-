@@ -1,0 +1,767 @@
+<!-- Save this file as: title.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Translation of the Holy Quran | Title Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@400;600;700&family=Scheherazade+New:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --void: #0a0e27;
+        --deep-space: #12173a;
+        --cosmic-purple: #6b46c1;
+        --stardust: #a78bfa;
+        --gold-star: #fbbf24;
+        --gold-deep: #d97706;
+        --nova: #f472b6;
+        --aurora: #34d399;
+        --moonlight: #e0e7ff;
+        --text-glow: #cbd5e1;
+        --text-muted: #94a3b8;
+        --card-bg: rgba(26, 31, 78, 0.4);
+        --border-glow: rgba(167, 139, 250, 0.2);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Cormorant Garamond", "Segoe UI", sans-serif;
+      }
+
+      body {
+        background: var(--void);
+        background-image:
+          radial-gradient(
+            ellipse at 20% 30%,
+            rgba(107, 70, 193, 0.35) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            ellipse at 80% 70%,
+            rgba(244, 114, 182, 0.2) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            ellipse at 50% 90%,
+            rgba(52, 211, 153, 0.12) 0%,
+            transparent 60%
+          ),
+          linear-gradient(180deg, var(--void) 0%, var(--deep-space) 100%);
+        background-attachment: fixed;
+        color: var(--moonlight);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 15px;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image:
+          radial-gradient(1px 1px at 20px 30px, white, transparent),
+          radial-gradient(
+            1px 1px at 40px 70px,
+            rgba(255, 255, 255, 0.8),
+            transparent
+          ),
+          radial-gradient(1px 1px at 90px 40px, white, transparent),
+          radial-gradient(
+            1px 1px at 130px 80px,
+            rgba(255, 255, 255, 0.6),
+            transparent
+          ),
+          radial-gradient(
+            2px 2px at 160px 30px,
+            rgba(251, 191, 36, 0.8),
+            transparent
+          ),
+          radial-gradient(1px 1px at 200px 90px, white, transparent),
+          radial-gradient(
+            1px 1px at 240px 50px,
+            rgba(167, 139, 250, 0.8),
+            transparent
+          ),
+          radial-gradient(1px 1px at 280px 10px, white, transparent),
+          radial-gradient(
+            2px 2px at 320px 60px,
+            rgba(244, 114, 182, 0.6),
+            transparent
+          ),
+          radial-gradient(1px 1px at 360px 100px, white, transparent);
+        background-size: 400px 200px;
+        background-repeat: repeat;
+        opacity: 0.5;
+        animation: twinkle 8s ease-in-out infinite;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      @keyframes twinkle {
+        0%,
+        100% {
+          opacity: 0.3;
+        }
+        50% {
+          opacity: 0.7;
+        }
+      }
+
+      .orb {
+        position: fixed;
+        border-radius: 50%;
+        filter: blur(90px);
+        opacity: 0.3;
+        pointer-events: none;
+        z-index: 0;
+      }
+      .orb-1 {
+        width: 500px;
+        height: 500px;
+        background: var(--cosmic-purple);
+        top: -150px;
+        right: -100px;
+        animation: float1 25s ease-in-out infinite;
+      }
+      .orb-2 {
+        width: 400px;
+        height: 400px;
+        background: var(--nova);
+        bottom: -100px;
+        left: -100px;
+        animation: float2 30s ease-in-out infinite;
+      }
+      .orb-3 {
+        width: 300px;
+        height: 300px;
+        background: var(--aurora);
+        top: 40%;
+        left: 50%;
+        animation: float1 35s ease-in-out infinite reverse;
+      }
+
+      @keyframes float1 {
+        0%,
+        100% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(60px, 70px);
+        }
+      }
+      @keyframes float2 {
+        0%,
+        100% {
+          transform: translate(0, 0);
+        }
+        50% {
+          transform: translate(-50px, -60px);
+        }
+      }
+
+      .title-container {
+        max-width: 800px;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        text-align: center;
+      }
+
+      /* ── ISLAMIC GEOMETRIC STAR CENTREPIECE ── */
+      .geometric-frame {
+        width: 320px;
+        height: 320px;
+        margin: 0 auto 30px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .geometric-svg {
+        width: 100%;
+        height: 100%;
+        filter: drop-shadow(0 0 20px rgba(251, 191, 36, 0.4));
+        animation: rotateSlow 60s linear infinite;
+      }
+      .geometric-svg-inner {
+        animation: rotateReverse 45s linear infinite;
+      }
+
+      @keyframes rotateSlow {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes rotateReverse {
+        from {
+          transform: rotate(360deg);
+        }
+        to {
+          transform: rotate(0deg);
+        }
+      }
+
+      /* Bismillah placed inside the frame */
+      .bismillah-inside {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: "Amiri", "Scheherazade New", serif;
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--gold-star);
+        text-shadow:
+          0 0 25px rgba(251, 191, 36, 0.6),
+          0 0 50px rgba(251, 191, 36, 0.3);
+        direction: rtl;
+        white-space: nowrap;
+        letter-spacing: 2px;
+        animation: shimmer 5s ease-in-out infinite;
+      }
+
+      @keyframes shimmer {
+        0%,
+        100% {
+          text-shadow:
+            0 0 25px rgba(251, 191, 36, 0.6),
+            0 0 50px rgba(251, 191, 36, 0.3);
+        }
+        50% {
+          text-shadow:
+            0 0 35px rgba(251, 191, 36, 0.9),
+            0 0 70px rgba(251, 191, 36, 0.5);
+        }
+      }
+
+      .bismillah-translation {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.05rem;
+        color: var(--text-muted);
+        font-style: italic;
+        margin-bottom: 40px;
+        letter-spacing: 0.5px;
+      }
+
+      /* Ornamental Divider */
+      .divider {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        margin: 25px 0;
+        color: var(--gold-star);
+      }
+      .divider::before,
+      .divider::after {
+        content: "";
+        flex: 1;
+        max-width: 120px;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--gold-star),
+          transparent
+        );
+      }
+      .divider-icon {
+        font-size: 1.2rem;
+        opacity: 0.8;
+      }
+
+      /* Title Text */
+      .book-title {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 3.2rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 1.15;
+        margin-bottom: 8px;
+        background: linear-gradient(
+          135deg,
+          var(--moonlight),
+          var(--stardust),
+          var(--gold-star),
+          var(--nova)
+        );
+        background-size: 300% 300%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        animation: gradientShift 8s ease-in-out infinite;
+      }
+      @keyframes gradientShift {
+        0%,
+        100% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+      }
+
+      .book-subtitle-ar {
+        font-family: "Amiri", serif;
+        font-size: 1.8rem;
+        color: var(--gold-star);
+        font-weight: 400;
+        letter-spacing: 1px;
+        direction: rtl;
+        margin-bottom: 6px;
+        opacity: 0.9;
+      }
+
+      .book-class {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.15rem;
+        color: var(--stardust);
+        font-weight: 500;
+        margin-bottom: 40px;
+        font-style: italic;
+        letter-spacing: 1px;
+      }
+
+      /* Info Card */
+      .info-card {
+        background: var(--card-bg);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid var(--border-glow);
+        border-radius: 20px;
+        padding: 30px 35px;
+        text-align: left;
+        box-shadow: 0 0 50px rgba(107, 70, 193, 0.15);
+        margin-bottom: 30px;
+        position: relative;
+      }
+      .info-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 20px;
+        right: 20px;
+        height: 1px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          var(--gold-star),
+          transparent
+        );
+        opacity: 0.5;
+      }
+      .info-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(167, 139, 250, 0.1);
+      }
+      .info-row:last-child {
+        border-bottom: none;
+      }
+      .info-label {
+        color: var(--text-muted);
+        font-size: 0.95rem;
+        font-weight: 500;
+        font-family: "Cormorant Garamond", serif;
+      }
+      .info-value {
+        color: var(--moonlight);
+        font-size: 1rem;
+        font-weight: 600;
+        text-align: right;
+        font-family: "Cormorant Garamond", serif;
+      }
+
+      /* TOC Preview */
+      .toc-preview {
+        background: var(--card-bg);
+        backdrop-filter: blur(20px);
+        border: 1px solid var(--border-glow);
+        border-radius: 20px;
+        padding: 30px 35px;
+        text-align: left;
+        margin-bottom: 30px;
+      }
+      .toc-title {
+        font-family: "Cormorant Garamond", serif;
+        color: var(--gold-star);
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        text-align: center;
+        letter-spacing: 2px;
+      }
+      .toc-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 30px;
+      }
+      .toc-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 0;
+        font-size: 0.92rem;
+        color: var(--text-glow);
+        border-bottom: 1px dotted rgba(167, 139, 250, 0.1);
+        font-family: "Cormorant Garamond", serif;
+      }
+      .toc-item .num {
+        color: var(--stardust);
+        font-weight: 700;
+        margin-right: 8px;
+        min-width: 22px;
+      }
+      .toc-item .pg {
+        color: var(--text-muted);
+        font-size: 0.85rem;
+      }
+
+      /* CTA Button */
+      .cta-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: linear-gradient(135deg, var(--cosmic-purple), var(--nova));
+        color: white;
+        text-decoration: none;
+        padding: 16px 40px;
+        border-radius: 14px;
+        font-size: 1.15rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+        font-family: "Cormorant Garamond", serif;
+        box-shadow: 0 0 30px rgba(107, 70, 193, 0.4);
+        transition: all 0.3s;
+      }
+      .cta-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 0 50px rgba(107, 70, 193, 0.6);
+      }
+
+      footer {
+        margin-top: 40px;
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        font-family: "Cormorant Garamond", serif;
+      }
+      footer .name {
+        font-weight: 700;
+        font-size: 1.1rem;
+        letter-spacing: 1px;
+        background: linear-gradient(135deg, var(--stardust), var(--gold-star));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      @media (max-width: 600px) {
+        .book-title {
+          font-size: 2.2rem;
+        }
+        .book-subtitle-ar {
+          font-size: 1.4rem;
+        }
+        .bismillah-inside {
+          font-size: 1.4rem;
+        }
+        .geometric-frame {
+          width: 260px;
+          height: 260px;
+        }
+        .toc-grid {
+          grid-template-columns: 1fr;
+        }
+        .info-card,
+        .toc-preview {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <div class="title-container">
+      <!-- ── ISLAMIC GEOMETRIC CENTREPIECE WITH BISMILLAH ── -->
+      <div class="geometric-frame">
+        <svg
+          class="geometric-svg"
+          viewBox="0 0 400 400"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <defs>
+            <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#fbbf24" />
+              <stop offset="50%" stop-color="#f472b6" />
+              <stop offset="100%" stop-color="#a78bfa" />
+            </linearGradient>
+            <linearGradient id="starGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.9" />
+              <stop offset="100%" stop-color="#d97706" stop-opacity="0.7" />
+            </linearGradient>
+          </defs>
+
+          <!-- Outer 16-point star -->
+          <g
+            fill="none"
+            stroke="url(#goldGrad)"
+            stroke-width="1.5"
+            opacity="0.7"
+          >
+            <polygon
+              points="200,20 220,150 350,120 240,200 350,280 220,250 200,380 180,250 50,280 160,200 50,120 180,150"
+            />
+          </g>
+
+          <!-- Middle octagon rotated -->
+          <g fill="none" stroke="#a78bfa" stroke-width="1" opacity="0.5">
+            <polygon
+              points="200,60 300,100 340,200 300,300 200,340 100,300 60,200 100,100"
+              transform="rotate(22.5 200 200)"
+            />
+          </g>
+
+          <!-- Inner 8-point star -->
+          <g
+            fill="none"
+            stroke="url(#starGrad)"
+            stroke-width="1.5"
+            opacity="0.8"
+          >
+            <polygon
+              points="200,80 225,175 320,200 225,225 200,320 175,225 80,200 175,175"
+            />
+          </g>
+
+          <!-- Decorative outer ring dots -->
+          <g fill="#fbbf24" opacity="0.6">
+            <circle cx="200" cy="15" r="3" />
+            <circle cx="330" cy="70" r="3" />
+            <circle cx="385" cy="200" r="3" />
+            <circle cx="330" cy="330" r="3" />
+            <circle cx="200" cy="385" r="3" />
+            <circle cx="70" cy="330" r="3" />
+            <circle cx="15" cy="200" r="3" />
+            <circle cx="70" cy="70" r="3" />
+          </g>
+
+          <!-- Central circle border -->
+          <circle
+            cx="200"
+            cy="200"
+            r="90"
+            fill="none"
+            stroke="url(#goldGrad)"
+            stroke-width="1.5"
+            opacity="0.6"
+          />
+          <circle
+            cx="200"
+            cy="200"
+            r="85"
+            fill="none"
+            stroke="#a78bfa"
+            stroke-width="0.5"
+            opacity="0.4"
+            stroke-dasharray="3,3"
+          />
+
+          <!-- Inner geometric pattern -->
+          <g class="geometric-svg-inner" transform-origin="200 200">
+            <g fill="none" stroke="#fbbf24" stroke-width="0.8" opacity="0.5">
+              <path
+                d="M 200 130 L 250 165 L 250 235 L 200 270 L 150 235 L 150 165 Z"
+              />
+              <path
+                d="M 200 130 L 150 165 M 200 130 L 250 165 M 250 235 L 200 270 M 200 270 L 150 235"
+              />
+            </g>
+          </g>
+        </svg>
+
+        <!-- Bismillah placed inside -->
+        <div class="bismillah-inside">
+          بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+        </div>
+      </div>
+
+      <div class="bismillah-translation">
+        In the name of Allah, the Most Gracious, the Most Merciful
+      </div>
+
+      <div class="divider">
+        <span class="divider-icon">✦</span>
+      </div>
+
+      <div class="book-title">Translation of the<br />Holy Quran</div>
+      <div class="book-subtitle-ar">تَرْجَمَةُ الْقُرْآنِ الْمَجِيْدِ</div>
+      <div class="book-class">Class 11 (HSSC Part-I) — Compulsory</div>
+
+      <div class="info-card">
+        <div class="info-row">
+          <span class="info-label">Board</span>
+          <span class="info-value"
+            >Punjab Curriculum & Textbook Board, Lahore</span
+          >
+        </div>
+        <div class="info-row">
+          <span class="info-label">Curriculum</span>
+          <span class="info-value">National Curriculum for Quran 2021</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Approved By</span>
+          <span class="info-value">United Ulema Board, Punjab</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Translation Source</span>
+          <span class="info-value">Al-Ilm Foundation, Karachi</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Author</span>
+          <span class="info-value">Hafiz Muhammad Tahir</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Consultant</span>
+          <span class="info-value">Hafiz Muhammad Iqbal</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Edition</span>
+          <span class="info-value">First Edition</span>
+        </div>
+      </div>
+
+      <div class="toc-preview">
+        <div class="toc-title">✦ Table of Contents ✦</div>
+        <div class="toc-grid">
+          <div class="toc-item">
+            <span><span class="num">01</span> Etiquettes of the Holy Quran</span
+            ><span class="pg">i</span>
+          </div>
+          <div class="toc-item">
+            <span><span class="num">02</span> Guidelines for Teachers</span
+            ><span class="pg">ii</span>
+          </div>
+          <div class="toc-item">
+            <span><span class="num">03</span> Teaching Objectives</span
+            ><span class="pg">iii</span>
+          </div>
+          <div class="toc-item">
+            <span
+              ><span class="num">04</span> Surah Al-Baqarah: Introduction</span
+            ><span class="pg">1</span>
+          </div>
+          <div class="toc-item">
+            <span
+              ><span class="num">05</span> Surah Al-Baqarah: Themes & Key
+              Points</span
+            ><span class="pg">3</span>
+          </div>
+          <div class="toc-item">
+            <span
+              ><span class="num">06</span> Surah Al-Baqarah: Text &
+              Translation</span
+            ><span class="pg">17</span>
+          </div>
+          <div class="toc-item">
+            <span><span class="num">07</span> Surah Al-Baqarah: Exercises</span
+            ><span class="pg">53</span>
+          </div>
+          <div class="toc-item">
+            <span
+              ><span class="num">08</span> Surah Ali 'Imran: Introduction</span
+            ><span class="pg">57</span>
+          </div>
+          <div class="toc-item">
+            <span
+              ><span class="num">09</span> Surah Ali 'Imran: Themes & Key
+              Points</span
+            ><span class="pg">60</span>
+          </div>
+          <div class="toc-item">
+            <span
+              ><span class="num">10</span> Surah Ali 'Imran: Text &
+              Translation</span
+            ><span class="pg">63</span>
+          </div>
+          <div class="toc-item">
+            <span><span class="num">11</span> Surah Ali 'Imran: Exercises</span
+            ><span class="pg">91</span>
+          </div>
+          <div class="toc-item">
+            <span><span class="num">12</span> Surah Al-Anfal: Introduction</span
+            ><span class="pg">95</span>
+          </div>
+          <div class="toc-item">
+            <span
+              ><span class="num">13</span> Surah Al-Anfal: Themes & Key
+              Points</span
+            ><span class="pg">97</span>
+          </div>
+          <div class="toc-item">
+            <span
+              ><span class="num">14</span> Surah Al-Anfal: Text &
+              Translation</span
+            ><span class="pg">100</span>
+          </div>
+          <div class="toc-item">
+            <span><span class="num">15</span> Surah Al-Anfal: Exercises</span
+            ><span class="pg">110</span>
+          </div>
+          <div class="toc-item">
+            <span
+              ><span class="num">16</span> Surah At-Tawbah: Introduction</span
+            ><span class="pg">114</span>
+          </div>
+          <div class="toc-item">
+            <span
+              ><span class="num">17</span> Surah At-Tawbah: Themes & Key
+              Points</span
+            ><span class="pg">117</span>
+          </div>
+          <div class="toc-item">
+            <span
+              ><span class="num">18</span> Surah At-Tawbah: Text &
+              Translation</span
+            ><span class="pg">119</span>
+          </div>
+          <div class="toc-item">
+            <span><span class="num">19</span> Surah At-Tawbah: Exercises</span
+            ><span class="pg">138</span>
+          </div>
+          <div class="toc-item">
+            <span><span class="num">20</span> Model Paper (Class 11)</span
+            ><span class="pg">142</span>
+          </div>
+        </div>
+      </div>
+
+      <a href="index.html" class="cta-btn">Enter the Study Portal →</a>
+
+      <footer>
+        <span class="name">Rehan Gohar</span>
+      </footer>
+    </div>
+  </body>
+</html>
