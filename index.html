@@ -1,190 +1,24 @@
-<!-- Save this file as: index.html -->
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tarjuma-tul-Quran | Cosmic Study Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <style>
-      :root {
-        --void: #0a0e27;
-        --deep-space: #12173a;
-        --nebula: #1a1f4e;
-        --cosmic-purple: #6b46c1;
-        --stardust: #a78bfa;
-        --gold-star: #fbbf24;
-        --nova: #f472b6;
-        --aurora: #34d399;
-        --moonlight: #e0e7ff;
-        --text-glow: #cbd5e1;
-        --text-muted: #94a3b8;
-        --card-bg: rgba(26, 31, 78, 0.4);
-        --border-glow: rgba(167, 139, 250, 0.2);
-      }
-
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        font-family:
-          "Segoe UI",
-          -apple-system,
-          BlinkMacSystemFont,
-          sans-serif;
-      }
-
-      /* Cosmic Background */
-      body {
-        background: var(--void);
-        background-image:
-          radial-gradient(
-            ellipse at 20% 30%,
-            rgba(107, 70, 193, 0.3) 0%,
-            transparent 50%
-          ),
-          radial-gradient(
-            ellipse at 80% 70%,
-            rgba(244, 114, 182, 0.2) 0%,
-            transparent 50%
-          ),
-          radial-gradient(
-            ellipse at 50% 50%,
-            rgba(52, 211, 153, 0.1) 0%,
-            transparent 70%
-          ),
-          linear-gradient(180deg, var(--void) 0%, var(--deep-space) 100%);
-        background-attachment: fixed;
-        color: var(--moonlight);
-        padding: 30px 15px;
-        line-height: 1.6;
-        min-height: 100vh;
-        position: relative;
-        overflow-x: hidden;
-      }
-
-      /* Twinkling Stars Layer */
-      body::before {
-        content: "";
-        position: fixed;
-        inset: 0;
-        background-image:
-          radial-gradient(1px 1px at 20px 30px, white, transparent),
-          radial-gradient(
-            1px 1px at 40px 70px,
-            rgba(255, 255, 255, 0.8),
-            transparent
-          ),
-          radial-gradient(1px 1px at 90px 40px, white, transparent),
-          radial-gradient(
-            1px 1px at 130px 80px,
-            rgba(255, 255, 255, 0.6),
-            transparent
-          ),
-          radial-gradient(
-            2px 2px at 160px 30px,
-            rgba(251, 191, 36, 0.8),
-            transparent
-          ),
-          radial-gradient(1px 1px at 200px 90px, white, transparent),
-          radial-gradient(
-            1px 1px at 240px 50px,
-            rgba(167, 139, 250, 0.8),
-            transparent
-          ),
-          radial-gradient(1px 1px at 280px 10px, white, transparent),
-          radial-gradient(
-            2px 2px at 320px 60px,
-            rgba(244, 114, 182, 0.6),
-            transparent
-          ),
-          radial-gradient(1px 1px at 360px 100px, white, transparent);
-        background-size: 400px 200px;
-        background-repeat: repeat;
-        opacity: 0.6;
-        animation: twinkle 8s ease-in-out infinite;
-        pointer-events: none;
-        z-index: 0;
-      }
-
-      @keyframes twinkle {
-        0%,
-        100% {
-          opacity: 0.4;
-        }
-        50% {
-          opacity: 0.8;
-        }
-      }
-
-      /* Floating Orbs */
-      .orb {
-        position: fixed;
-        border-radius: 50%;
-        filter: blur(80px);
-        opacity: 0.4;
-        pointer-events: none;
-        z-index: 0;
-      }
-      .orb-1 {
-        width: 400px;
-        height: 400px;
-        background: var(--cosmic-purple);
-        top: -100px;
-        left: -100px;
-        animation: float1 20s ease-in-out infinite;
-      }
-      .orb-2 {
-        width: 350px;
-        height: 350px;
-        background: var(--nova);
-        bottom: -50px;
-        right: -80px;
-        animation: float2 25s ease-in-out infinite;
-      }
-      .orb-3 {
-        width: 300px;
-        height: 300px;
-        background: var(--aurora);
-        top: 50%;
-        left: 60%;
-        animation: float1 30s ease-in-out infinite reverse;
-      }
-
-      @keyframes float1 {
-        0%,
-        100% {
-          transform: translate(0, 0);
-        }
-        50% {
-          transform: translate(50px, 80px);
-        }
-      }
-      @keyframes float2 {
-        0%,
-        100% {
-          transform: translate(0, 0);
-        }
-        50% {
-          transform: translate(-70px, -50px);
-        }
-      }
-
-      .dashboard-container {
-        max-width: 1150px;
-        margin: 0 auto;
-        position: relative;
-        z-index: 1;
-      }
-
-      /* Hero Header — Planetary Design */
-      header {
+      /* Dashboard-specific styles */
+      .dashboard-hero {
         background: linear-gradient(
           135deg,
           rgba(26, 31, 78, 0.7),
           rgba(10, 14, 39, 0.9)
         );
         backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
         padding: 50px 40px;
         border-radius: 24px;
         color: var(--moonlight);
@@ -194,91 +28,21 @@
         border: 1px solid var(--border-glow);
         position: relative;
         overflow: hidden;
-        margin-bottom: 40px;
+        margin-bottom: 35px;
+        text-align: center;
       }
-
-      /* Orbital Ring Decoration */
-      header::before {
-        content: "";
+      .dashboard-hero::before {
+        content: "﷽";
         position: absolute;
-        width: 300px;
-        height: 300px;
-        border: 2px solid rgba(167, 139, 250, 0.15);
-        border-radius: 50%;
-        top: -80px;
-        right: -80px;
-        animation: rotate 30s linear infinite;
+        right: 30px;
+        top: 20px;
+        font-size: 4rem;
+        color: rgba(251, 191, 36, 0.15);
+        font-family: "Amiri", serif;
       }
-      header::after {
-        content: "";
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        border: 2px dashed rgba(251, 191, 36, 0.2);
-        border-radius: 50%;
-        top: -30px;
-        right: -30px;
-        animation: rotate 20s linear infinite reverse;
-      }
-
-      @keyframes rotate {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(360deg);
-        }
-      }
-
-      /* Planet in Header */
-      .planet {
-        position: absolute;
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        background: radial-gradient(
-          circle at 30% 30%,
-          var(--gold-star),
-          var(--nova) 50%,
-          var(--cosmic-purple)
-        );
-        top: 40px;
-        right: 60px;
-        box-shadow:
-          0 0 40px rgba(251, 191, 36, 0.5),
-          inset -10px -10px 20px rgba(0, 0, 0, 0.4);
-        animation: pulse 4s ease-in-out infinite;
-      }
-      .planet::before {
-        content: "";
-        position: absolute;
-        width: 120px;
-        height: 30px;
-        border: 2px solid rgba(251, 191, 36, 0.4);
-        border-radius: 50%;
-        top: 25px;
-        left: -20px;
-        transform: rotate(-20deg);
-      }
-
-      @keyframes pulse {
-        0%,
-        100% {
-          box-shadow:
-            0 0 40px rgba(251, 191, 36, 0.5),
-            inset -10px -10px 20px rgba(0, 0, 0, 0.4);
-        }
-        50% {
-          box-shadow:
-            0 0 60px rgba(251, 191, 36, 0.7),
-            inset -10px -10px 20px rgba(0, 0, 0, 0.4);
-        }
-      }
-
-      header h1 {
+      .dashboard-hero h1 {
+        font-family: "Cormorant Garamond", serif;
         font-size: 2.5rem;
-        letter-spacing: -0.5px;
-        margin-bottom: 10px;
         background: linear-gradient(
           135deg,
           var(--moonlight),
@@ -288,78 +52,48 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        position: relative;
-        z-index: 2;
+        margin-bottom: 8px;
       }
-      header p.subtitle {
+      .dashboard-hero p.tagline {
         color: var(--gold-star);
         font-weight: 600;
-        font-size: 1.1rem;
         letter-spacing: 1px;
         text-transform: uppercase;
-        position: relative;
-        z-index: 2;
+        font-size: 1rem;
       }
-      header p.desc {
+      .dashboard-hero p.desc {
         color: var(--text-glow);
-        font-size: 0.95rem;
         max-width: 700px;
-        margin-top: 15px;
-        position: relative;
-        z-index: 2;
+        margin: 15px auto 0;
+        font-size: 0.95rem;
       }
-
-      /* Stats — Constellation Cards */
       .stats-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         gap: 18px;
         margin-bottom: 40px;
       }
       .stat-card {
         background: var(--card-bg);
         backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
         padding: 22px;
         border-radius: 16px;
         border: 1px solid var(--border-glow);
         display: flex;
         align-items: center;
         gap: 15px;
-        position: relative;
-        overflow: hidden;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      }
-      .stat-card::before {
-        content: "";
-        position: absolute;
-        top: -50%;
-        left: -50%;
-        width: 200%;
-        height: 200%;
-        background: radial-gradient(
-          circle,
-          rgba(167, 139, 250, 0.1) 0%,
-          transparent 70%
-        );
-        opacity: 0;
-        transition: opacity 0.4s;
+        transition: all 0.3s;
       }
       .stat-card:hover {
         transform: translateY(-4px);
         border-color: var(--stardust);
         box-shadow: 0 10px 40px rgba(167, 139, 250, 0.2);
       }
-      .stat-card:hover::before {
-        opacity: 1;
-      }
-
       .stat-icon {
         font-size: 1.8rem;
         background: linear-gradient(135deg, var(--cosmic-purple), var(--nova));
         padding: 12px;
         border-radius: 12px;
-        line-height: 1;
         box-shadow: 0 0 20px rgba(107, 70, 193, 0.4);
       }
       .stat-info h4 {
@@ -370,202 +104,95 @@
       .stat-info span {
         font-size: 0.82rem;
         color: var(--text-muted);
-        font-weight: 500;
       }
 
-      /* Toolbar */
-      .toolbar {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        gap: 15px;
-        margin-bottom: 25px;
-      }
-      .section-title {
-        color: var(--moonlight);
-        font-size: 1.5rem;
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-      .section-title::before {
-        content: "✦";
-        color: var(--gold-star);
-        font-size: 1.3rem;
-        animation: sparkle 2s ease-in-out infinite;
-      }
-
-      @keyframes sparkle {
-        0%,
-        100% {
-          transform: scale(1) rotate(0deg);
-          opacity: 1;
-        }
-        50% {
-          transform: scale(1.2) rotate(180deg);
-          opacity: 0.7;
-        }
-      }
-
-      .search-filter-box {
-        display: flex;
-        gap: 10px;
-        flex-wrap: wrap;
-      }
-      .search-input {
-        padding: 10px 16px;
-        border: 1px solid var(--border-glow);
-        border-radius: 10px;
-        font-size: 0.92rem;
-        outline: none;
-        min-width: 250px;
-        background: var(--card-bg);
-        backdrop-filter: blur(10px);
-        color: var(--moonlight);
-        transition: all 0.3s;
-      }
-      .search-input::placeholder {
-        color: var(--text-muted);
-      }
-      .search-input:focus {
-        border-color: var(--stardust);
-        box-shadow: 0 0 20px rgba(167, 139, 250, 0.3);
-      }
-      .filter-btn {
-        background: var(--card-bg);
-        backdrop-filter: blur(10px);
-        border: 1px solid var(--border-glow);
-        padding: 9px 16px;
-        border-radius: 10px;
-        font-size: 0.85rem;
-        cursor: pointer;
-        font-weight: 600;
-        color: var(--text-glow);
-        transition: all 0.3s;
-      }
-      .filter-btn.active,
-      .filter-btn:hover {
-        background: linear-gradient(135deg, var(--cosmic-purple), var(--nova));
-        color: white;
-        border-color: transparent;
-        box-shadow: 0 0 20px rgba(107, 70, 193, 0.4);
-      }
-
-      /* Chapter Cards — Cosmic Objects */
       .toc-grid {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 16px;
+        gap: 14px;
         margin-bottom: 45px;
       }
       .toc-card {
         background: var(--card-bg);
         backdrop-filter: blur(15px);
-        -webkit-backdrop-filter: blur(15px);
-        padding: 24px 28px;
-        border-radius: 16px;
+        padding: 22px 25px;
+        border-radius: 14px;
         border: 1px solid var(--border-glow);
+        border-left: 6px solid #cbd5e1;
         display: flex;
         align-items: center;
         justify-content: space-between;
         text-decoration: none;
         color: inherit;
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        position: relative;
-        overflow: hidden;
+        transition: all 0.3s;
       }
-      .toc-card::before {
-        content: "";
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        width: 4px;
-        background: linear-gradient(180deg, var(--cosmic-purple), var(--nova));
-        opacity: 0.3;
-        transition: opacity 0.4s;
+      .toc-card.active {
+        border-left-color: var(--gold-star);
       }
-      .toc-card.active-unit::before {
-        opacity: 1;
-        box-shadow: 0 0 20px var(--cosmic-purple);
-      }
-      .toc-card.active-unit:hover {
+      .toc-card.active:hover {
         transform: translateX(6px);
         border-color: var(--stardust);
-        box-shadow: 0 10px 40px rgba(167, 139, 250, 0.25);
+        box-shadow: 0 10px 40px rgba(167, 139, 250, 0.15);
       }
-      .toc-card.locked-unit {
-        opacity: 0.65;
+      .toc-card.locked {
+        opacity: 0.6;
         cursor: not-allowed;
       }
-
       .chapter-main {
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 18px;
       }
       .chapter-num {
         font-size: 1.15rem;
         font-weight: 700;
         color: var(--moonlight);
         background: linear-gradient(135deg, var(--nebula), var(--deep-space));
-        min-width: 52px;
-        height: 52px;
+        min-width: 48px;
+        height: 48px;
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 12px;
         border: 1px solid var(--border-glow);
-        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
       }
-      .active-unit .chapter-num {
+      .active .chapter-num {
         background: linear-gradient(135deg, var(--cosmic-purple), var(--nova));
         box-shadow: 0 0 20px rgba(167, 139, 250, 0.4);
       }
-
       .chapter-info h3 {
         color: var(--moonlight);
-        font-size: 1.15rem;
-        margin-bottom: 5px;
+        font-size: 1.1rem;
+        margin-bottom: 4px;
       }
       .chapter-info p {
-        font-size: 0.88rem;
         color: var(--text-muted);
+        font-size: 0.88rem;
+        margin: 0;
       }
       .chapter-meta {
         display: flex;
-        gap: 8px;
-        margin-top: 8px;
-        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 6px;
       }
       .meta-tag {
         font-size: 0.72rem;
-        padding: 3px 10px;
+        padding: 2px 8px;
         background: rgba(167, 139, 250, 0.1);
         border: 1px solid rgba(167, 139, 250, 0.2);
         border-radius: 12px;
         color: var(--stardust);
-        font-weight: 500;
-      }
-
-      .chapter-action {
-        display: flex;
-        align-items: center;
-        gap: 12px;
       }
       .badge {
         padding: 6px 14px;
         border-radius: 20px;
         font-size: 0.78rem;
         font-weight: 600;
-        white-space: nowrap;
       }
       .badge.ready {
         background: rgba(52, 211, 153, 0.15);
         color: var(--aurora);
         border: 1px solid rgba(52, 211, 153, 0.3);
-        box-shadow: 0 0 15px rgba(52, 211, 153, 0.2);
       }
       .badge.locked {
         background: rgba(148, 163, 184, 0.1);
@@ -574,168 +201,31 @@
       }
       .arrow-icon {
         color: var(--gold-star);
-        font-size: 1.4rem;
-        font-weight: bold;
-        transition: transform 0.3s;
-      }
-      .toc-card:hover .arrow-icon {
-        transform: translateX(4px);
-      }
-
-      /* Exam Scheme — Celestial Grid */
-      .exam-scheme {
-        background: var(--card-bg);
-        backdrop-filter: blur(15px);
-        border-radius: 20px;
-        border: 1px solid var(--border-glow);
-        padding: 35px;
-        margin-bottom: 45px;
-        position: relative;
-        overflow: hidden;
-      }
-      .exam-scheme::before {
-        content: "";
-        position: absolute;
-        top: -100px;
-        right: -100px;
-        width: 300px;
-        height: 300px;
-        background: radial-gradient(
-          circle,
-          rgba(251, 191, 36, 0.1),
-          transparent
-        );
-        border-radius: 50%;
-      }
-      .scheme-title {
-        color: var(--moonlight);
         font-size: 1.3rem;
-        font-weight: 700;
-        margin-bottom: 20px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        position: relative;
-      }
-      .scheme-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 16px;
-        position: relative;
-      }
-      .scheme-item {
-        background: rgba(10, 14, 39, 0.5);
-        padding: 18px;
-        border-radius: 12px;
-        border: 1px solid var(--border-glow);
-        transition: all 0.3s;
-      }
-      .scheme-item:hover {
-        border-color: var(--gold-star);
-        transform: translateY(-3px);
-      }
-      .scheme-item h5 {
-        color: var(--gold-star);
-        font-size: 0.95rem;
-        margin-bottom: 6px;
-      }
-      .scheme-item p {
-        font-size: 0.85rem;
-        color: var(--text-glow);
-      }
-      .scheme-item strong {
-        color: var(--nova);
-      }
-
-      /* Footer — Signature Constellation */
-      footer {
-        text-align: center;
-        margin-top: 55px;
-        padding: 30px 20px;
-        border-top: 1px solid var(--border-glow);
-        font-size: 0.88rem;
-        color: var(--text-muted);
-        line-height: 1.7;
-        position: relative;
-      }
-      footer::before {
-        content: "· · · ✦ · · ·";
-        display: block;
-        color: var(--gold-star);
-        margin-bottom: 15px;
-        letter-spacing: 8px;
-      }
-      footer strong {
-        color: var(--stardust);
-      }
-
-      @media (max-width: 768px) {
-        header {
-          padding: 35px 25px;
-        }
-        header h1 {
-          font-size: 1.8rem;
-        }
-        .planet {
-          width: 60px;
-          height: 60px;
-          top: 25px;
-          right: 25px;
-        }
-        .toc-card {
-          flex-direction: column;
-          align-items: flex-start;
-          gap: 15px;
-        }
-        .chapter-action {
-          width: 100%;
-          justify-content: space-between;
-        }
+        font-weight: bold;
+        margin-left: 12px;
       }
     </style>
   </head>
   <body>
-    <!-- Floating Cosmic Orbs -->
     <div class="orb orb-1"></div>
     <div class="orb orb-2"></div>
-    <div class="orb orb-3"></div>
-
-    <div class="dashboard-container">
-      <header>
-        <div class="planet"></div>
-        <p
-          style="
-            color: var(--gold-star);
-            font-size: 0.9rem;
-            margin-bottom: 10px;
-            position: relative;
-            z-index: 2;
-          "
-        >
-          <a
-            href="title.html"
-            style="
-              color: var(--gold-star);
-              text-decoration: none;
-              border-bottom: 1px dashed var(--gold-star);
-            "
-            >📖 View Title Page</a
-          >
-        </p>
+    <div class="container">
+      <div class="dashboard-hero">
         <h1>Tarjuma-tul-Quran-ul-Majeed</h1>
-        <p class="subtitle">✦ 11th Class • Cosmic Study Portal ✦</p>
+        <p class="tagline">✦ 11th Class • Cosmic Study Portal ✦</p>
         <p class="desc">
-          Structured English medium study modules covering background contexts,
-          thematic analyses, verse-by-verse conceptual frameworks, and board
-          exam question banks (PCTB, Federal Board, and KPK Boards).
+          English-medium study modules covering background, themes,
+          translations, and complete question banks for the Punjab & Federal
+          Board syllabus.
         </p>
-      </header>
+      </div>
 
       <div class="stats-grid">
         <div class="stat-card">
           <div class="stat-icon">🌌</div>
           <div class="stat-info">
-            <h4>15 Surahs</h4>
+            <h4>4 Surahs</h4>
             <span>Prescribed Curriculum</span>
           </div>
         </div>
@@ -749,58 +239,30 @@
         <div class="stat-card">
           <div class="stat-icon">🪐</div>
           <div class="stat-info">
-            <h4>14 Parahs</h4>
-            <span>Class 11 Scope</span>
+            <h4>PCTB</h4>
+            <span>Board Aligned</span>
           </div>
         </div>
         <div class="stat-card">
           <div class="stat-icon">✨</div>
           <div class="stat-info">
-            <h4>SNC Aligned</h4>
-            <span>Punjab & Federal Boards</span>
+            <h4>Free & Open</h4>
+            <span>For All Students</span>
           </div>
         </div>
       </div>
 
-      <div class="toolbar">
-        <h2 class="section-title">Chapters of the Cosmos</h2>
-        <div class="search-filter-box">
-          <input
-            type="text"
-            id="searchInput"
-            class="search-input"
-            placeholder="🔍 Search Surah or theme..."
-            onkeyup="filterSurahs()"
-          />
-          <button class="filter-btn active" onclick="setFilter('all', this)">
-            All
-          </button>
-          <button class="filter-btn" onclick="setFilter('ready', this)">
-            Available
-          </button>
-          <button class="filter-btn" onclick="setFilter('madani', this)">
-            Madani
-          </button>
-          <button class="filter-btn" onclick="setFilter('makki', this)">
-            Makki
-          </button>
-        </div>
-      </div>
+      <h2>Prescribed Chapters (Surahs)</h2>
 
-      <div class="toc-grid" id="chapterGrid">
-        <a
-          href="surah-al-baqarah.html"
-          class="toc-card active-unit"
-          data-status="ready"
-          data-type="madani"
-        >
+      <div class="toc-grid">
+        <a href="surah-al-baqarah.html" class="toc-card active">
           <div class="chapter-main">
             <div class="chapter-num">01</div>
             <div class="chapter-info">
               <h3>Surah Al-Baqarah (سورة البقرة)</h3>
               <p>
-                Thematic Overview, Covenant with Bani Israel, Comprehensive
-                Fiqh, Ayat al-Kursi & MCQ Bank
+                Introduction, themes, verse translations, MCQs, Q&A, and Adam's
+                story
               </p>
               <div class="chapter-meta">
                 <span class="meta-tag">Madani</span>
@@ -809,24 +271,19 @@
               </div>
             </div>
           </div>
-          <div class="chapter-action">
-            <span class="badge ready">● Ready to Study</span>
-            <span class="arrow-icon">➔</span>
+          <div>
+            <span class="badge ready">● Ready</span
+            ><span class="arrow-icon">➔</span>
           </div>
         </a>
 
-        <div
-          class="toc-card locked-unit"
-          data-status="locked"
-          data-type="madani"
-        >
+        <div class="toc-card locked">
           <div class="chapter-main">
             <div class="chapter-num">02</div>
             <div class="chapter-info">
               <h3>Surah Ali 'Imran (سورة آل عمران)</h3>
               <p>
-                Steadfastness in Faith, Christian Delegations of Najran, Lessons
-                from Ghazwa Uhud
+                Steadfastness in faith, Battle of Uhud, Christian delegation
               </p>
               <div class="chapter-meta">
                 <span class="meta-tag">Madani</span>
@@ -835,124 +292,15 @@
               </div>
             </div>
           </div>
-          <div class="chapter-action">
-            <span class="badge locked">🔒 In Preparation</span>
-          </div>
+          <span class="badge locked">🔒 Coming Soon</span>
         </div>
 
-        <div
-          class="toc-card locked-unit"
-          data-status="locked"
-          data-type="madani"
-        >
+        <div class="toc-card locked">
           <div class="chapter-main">
             <div class="chapter-num">03</div>
             <div class="chapter-info">
-              <h3>Surah An-Nisa (سورة النساء)</h3>
-              <p>
-                Social Justice, Orphan Care, Systematic Inheritance Laws,
-                Marital Ethics & Women's Rights
-              </p>
-              <div class="chapter-meta">
-                <span class="meta-tag">Madani</span>
-                <span class="meta-tag">176 Verses</span>
-                <span class="meta-tag">24 Rukus</span>
-              </div>
-            </div>
-          </div>
-          <div class="chapter-action">
-            <span class="badge locked">🔒 In Preparation</span>
-          </div>
-        </div>
-
-        <div
-          class="toc-card locked-unit"
-          data-status="locked"
-          data-type="madani"
-        >
-          <div class="chapter-main">
-            <div class="chapter-num">04</div>
-            <div class="chapter-info">
-              <h3>Surah Al-Ma'idah (سورة المائدة)</h3>
-              <p>
-                Sanctity of Covenants, Dietary Laws (Halal/Haram), Final
-                Completion of Religion
-              </p>
-              <div class="chapter-meta">
-                <span class="meta-tag">Madani</span>
-                <span class="meta-tag">120 Verses</span>
-                <span class="meta-tag">16 Rukus</span>
-              </div>
-            </div>
-          </div>
-          <div class="chapter-action">
-            <span class="badge locked">🔒 In Preparation</span>
-          </div>
-        </div>
-
-        <div
-          class="toc-card locked-unit"
-          data-status="locked"
-          data-type="makki"
-        >
-          <div class="chapter-main">
-            <div class="chapter-num">05</div>
-            <div class="chapter-info">
-              <h3>Surah Al-An'am (سورة الأنعام)</h3>
-              <p>
-                Doctrinal Foundations of Tawheed, Refutation of Polytheism,
-                Signs of Creation
-              </p>
-              <div class="chapter-meta">
-                <span class="meta-tag">Makki</span>
-                <span class="meta-tag">165 Verses</span>
-                <span class="meta-tag">20 Rukus</span>
-              </div>
-            </div>
-          </div>
-          <div class="chapter-action">
-            <span class="badge locked">🔒 In Preparation</span>
-          </div>
-        </div>
-
-        <div
-          class="toc-card locked-unit"
-          data-status="locked"
-          data-type="makki"
-        >
-          <div class="chapter-main">
-            <div class="chapter-num">06</div>
-            <div class="chapter-info">
-              <h3>Surah Al-A'raf (سورة الأعراف)</h3>
-              <p>
-                Cosmic Struggle of Good and Evil, Adam & Iblis, Historical
-                Accounts of Ancient Prophets
-              </p>
-              <div class="chapter-meta">
-                <span class="meta-tag">Makki</span>
-                <span class="meta-tag">206 Verses</span>
-                <span class="meta-tag">24 Rukus</span>
-              </div>
-            </div>
-          </div>
-          <div class="chapter-action">
-            <span class="badge locked">🔒 In Preparation</span>
-          </div>
-        </div>
-
-        <div
-          class="toc-card locked-unit"
-          data-status="locked"
-          data-type="madani"
-        >
-          <div class="chapter-main">
-            <div class="chapter-num">07</div>
-            <div class="chapter-info">
               <h3>Surah Al-Anfal (سورة الأنفال)</h3>
-              <p>
-                Battle of Badr Dynamics, Spoils of War (*Ghanimah*),
-                Psychological Factors in Jihad
-              </p>
+              <p>Battle of Badr, spoils of war, principles of jihad</p>
               <div class="chapter-meta">
                 <span class="meta-tag">Madani</span>
                 <span class="meta-tag">75 Verses</span>
@@ -960,24 +308,15 @@
               </div>
             </div>
           </div>
-          <div class="chapter-action">
-            <span class="badge locked">🔒 In Preparation</span>
-          </div>
+          <span class="badge locked">🔒 Coming Soon</span>
         </div>
 
-        <div
-          class="toc-card locked-unit"
-          data-status="locked"
-          data-type="madani"
-        >
+        <div class="toc-card locked">
           <div class="chapter-main">
-            <div class="chapter-num">08</div>
+            <div class="chapter-num">04</div>
             <div class="chapter-info">
               <h3>Surah At-Tawbah (سورة التوبة)</h3>
-              <p>
-                Treaty Renunciations, Expedition to Tabuk, Repentance Criteria,
-                Exposure of Hypocrites
-              </p>
+              <p>Treaty renunciation, expedition of Tabuk, repentance</p>
               <div class="chapter-meta">
                 <span class="meta-tag">Madani</span>
                 <span class="meta-tag">129 Verses</span>
@@ -985,117 +324,11 @@
               </div>
             </div>
           </div>
-          <div class="chapter-action">
-            <span class="badge locked">🔒 In Preparation</span>
-          </div>
-        </div>
-
-        <div
-          class="toc-card locked-unit"
-          data-status="locked"
-          data-type="makki"
-        >
-          <div class="chapter-main">
-            <div class="chapter-num">09–15</div>
-            <div class="chapter-info">
-              <h3>
-                Surahs Yunus to An-Nahl (يونس، هود، يوسف، الرعد، إبراهيم، الحجر،
-                النحل)
-              </h3>
-              <p>
-                Prophetic Narratives, Divine Mercy, The Best of Stories (Yusuf
-                A.S.), and Natural Parables
-              </p>
-              <div class="chapter-meta">
-                <span class="meta-tag">Makki / Madani</span>
-                <span class="meta-tag">Class 11 Scope</span>
-              </div>
-            </div>
-          </div>
-          <div class="chapter-action">
-            <span class="badge locked">🔒 In Preparation</span>
-          </div>
+          <span class="badge locked">🔒 Coming Soon</span>
         </div>
       </div>
 
-      <div class="exam-scheme">
-        <div class="scheme-title">
-          <span>🌠</span> Board Examination Assessment Scheme (Total: 50 Marks)
-        </div>
-        <div class="scheme-grid">
-          <div class="scheme-item">
-            <h5>Q1. Objective MCQs</h5>
-            <p>
-              <strong>10 Marks</strong> — 10 Questions × 1 Mark<br />Surah
-              introductions, root terms & key concepts.
-            </p>
-          </div>
-          <div class="scheme-item">
-            <h5>Q2. Short Answers</h5>
-            <p>
-              <strong>10 Marks</strong> — 5 out of 8 × 2 Marks<br />Brief
-              conceptual, thematic & historical explanations.
-            </p>
-          </div>
-          <div class="scheme-item">
-            <h5>Q3. Verse Translation</h5>
-            <p>
-              <strong>15 Marks</strong> — 3 out of 5 × 5 Marks<br />Accurate
-              Idiomatic English Translation.
-            </p>
-          </div>
-          <div class="scheme-item">
-            <h5>Q4. Quranic Vocabulary</h5>
-            <p>
-              <strong>05 Marks</strong> — 5 out of 8 × 1 Mark<br />Word-for-word
-              contextual terminology definitions.
-            </p>
-          </div>
-          <div class="scheme-item">
-            <h5>Q5. Detailed Surah Note</h5>
-            <p>
-              <strong>10 Marks</strong> — 1 out of 2 Detailed Notes<br />In-depth
-              background, core message & practical lessons.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <footer>
-        <strong>Academic Direction:</strong> Naeem Haider, Director EnglishKeys
-        Academy<br />
-        MA English (Gold Medalist) • M.Phil. English • MA TEFL • MA History<br />
-        Institutional Contact & Support Lines: <strong>+92 311 5252663</strong>
-      </footer>
+      <footer><span class="name">Rehan Gohar</span></footer>
     </div>
-
-    <script>
-      let currentFilter = "all";
-      function setFilter(filter, element) {
-        currentFilter = filter;
-        document
-          .querySelectorAll(".filter-btn")
-          .forEach((btn) => btn.classList.remove("active"));
-        element.classList.add("active");
-        filterSurahs();
-      }
-      function filterSurahs() {
-        const query = document
-          .getElementById("searchInput")
-          .value.toLowerCase();
-        const cards = document.querySelectorAll("#chapterGrid .toc-card");
-        cards.forEach((card) => {
-          const text = card.innerText.toLowerCase();
-          const matchesQuery = text.includes(query);
-          const cardType = card.getAttribute("data-type");
-          const cardStatus = card.getAttribute("data-status");
-          let matchesFilter = true;
-          if (currentFilter === "ready") matchesFilter = cardStatus === "ready";
-          if (currentFilter === "madani") matchesFilter = cardType === "madani";
-          if (currentFilter === "makki") matchesFilter = cardType === "makki";
-          card.style.display = matchesQuery && matchesFilter ? "flex" : "none";
-        });
-      }
-    </script>
   </body>
 </html>
